@@ -12,6 +12,27 @@
 		FE40287622175DB90062E355 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FE40287422175DB90062E355 /* Main.storyboard */; };
 		FE40287822175DBB0062E355 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FE40287722175DBB0062E355 /* Assets.xcassets */; };
 		FE40287B22175DBB0062E355 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FE40287922175DBB0062E355 /* LaunchScreen.storyboard */; };
+		FE40288A221760C60062E355 /* ParameterEnconding.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE402889221760C60062E355 /* ParameterEnconding.swift */; };
+		FE40288C221761F60062E355 /* URLParameterEncoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE40288B221761F60062E355 /* URLParameterEncoder.swift */; };
+		FE40288E221763750062E355 /* JSONParameterEncoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE40288D221763750062E355 /* JSONParameterEncoder.swift */; };
+		FE4028912217674C0062E355 /* EndPointType.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE4028902217674C0062E355 /* EndPointType.swift */; };
+		FE4028932217681E0062E355 /* HTTPMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE4028922217681E0062E355 /* HTTPMethod.swift */; };
+		FE402895221768800062E355 /* HTTPTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE402894221768800062E355 /* HTTPTask.swift */; };
+		FE402897221768A20062E355 /* HTTPHeaders.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE402896221768A20062E355 /* HTTPHeaders.swift */; };
+		FE40289922176B6A0062E355 /* NetworkRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE40289822176B6A0062E355 /* NetworkRouter.swift */; };
+		FE40289B22176C3A0062E355 /* NetworkLogger.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE40289A22176C3A0062E355 /* NetworkLogger.swift */; };
+		FE40289D22176CC50062E355 /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE40289C22176CC50062E355 /* Router.swift */; };
+		FE4028A12219AE670062E355 /* MarvelAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE4028A02219AE670062E355 /* MarvelAPI.swift */; };
+		FE4028A32219AE7A0062E355 /* MarvelAPI+Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE4028A22219AE7A0062E355 /* MarvelAPI+Constants.swift */; };
+		FE4028A72219B5340062E355 /* NetworkEnviroment.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE4028A62219B5340062E355 /* NetworkEnviroment.swift */; };
+		FE4028A92219B61B0062E355 /* MarvelAPIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE4028A82219B61B0062E355 /* MarvelAPIManager.swift */; };
+		FE4028AD2219BBA30062E355 /* String+MD5.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE4028AC2219BBA30062E355 /* String+MD5.swift */; };
+		FE4028AF2219D2D70062E355 /* Hero.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE4028AE2219D2D70062E355 /* Hero.swift */; };
+		FE4028B12219D3F80062E355 /* Thumbnail.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE4028B02219D3F80062E355 /* Thumbnail.swift */; };
+		FE4028B32219D5480062E355 /* Comics.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE4028B22219D5480062E355 /* Comics.swift */; };
+		FE4028B52219D5FB0062E355 /* Stories.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE4028B42219D5FB0062E355 /* Stories.swift */; };
+		FE4028B7221A3AA20062E355 /* Series.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE4028B6221A3AA20062E355 /* Series.swift */; };
+		FE4028B9221A3AC40062E355 /* Events.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE4028B8221A3AC40062E355 /* Events.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +43,27 @@
 		FE40287722175DBB0062E355 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FE40287A22175DBB0062E355 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FE40287C22175DBB0062E355 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FE402889221760C60062E355 /* ParameterEnconding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParameterEnconding.swift; sourceTree = "<group>"; };
+		FE40288B221761F60062E355 /* URLParameterEncoder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLParameterEncoder.swift; sourceTree = "<group>"; };
+		FE40288D221763750062E355 /* JSONParameterEncoder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONParameterEncoder.swift; sourceTree = "<group>"; };
+		FE4028902217674C0062E355 /* EndPointType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EndPointType.swift; sourceTree = "<group>"; };
+		FE4028922217681E0062E355 /* HTTPMethod.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPMethod.swift; sourceTree = "<group>"; };
+		FE402894221768800062E355 /* HTTPTask.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPTask.swift; sourceTree = "<group>"; };
+		FE402896221768A20062E355 /* HTTPHeaders.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPHeaders.swift; sourceTree = "<group>"; };
+		FE40289822176B6A0062E355 /* NetworkRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkRouter.swift; sourceTree = "<group>"; };
+		FE40289A22176C3A0062E355 /* NetworkLogger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkLogger.swift; sourceTree = "<group>"; };
+		FE40289C22176CC50062E355 /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
+		FE4028A02219AE670062E355 /* MarvelAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarvelAPI.swift; sourceTree = "<group>"; };
+		FE4028A22219AE7A0062E355 /* MarvelAPI+Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MarvelAPI+Constants.swift"; sourceTree = "<group>"; };
+		FE4028A62219B5340062E355 /* NetworkEnviroment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkEnviroment.swift; sourceTree = "<group>"; };
+		FE4028A82219B61B0062E355 /* MarvelAPIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarvelAPIManager.swift; sourceTree = "<group>"; };
+		FE4028AC2219BBA30062E355 /* String+MD5.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+MD5.swift"; sourceTree = "<group>"; };
+		FE4028AE2219D2D70062E355 /* Hero.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Hero.swift; sourceTree = "<group>"; };
+		FE4028B02219D3F80062E355 /* Thumbnail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Thumbnail.swift; sourceTree = "<group>"; };
+		FE4028B22219D5480062E355 /* Comics.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Comics.swift; sourceTree = "<group>"; };
+		FE4028B42219D5FB0062E355 /* Stories.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Stories.swift; sourceTree = "<group>"; };
+		FE4028B6221A3AA20062E355 /* Series.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Series.swift; sourceTree = "<group>"; };
+		FE4028B8221A3AC40062E355 /* Events.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Events.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,14 +96,147 @@
 		FE40286F22175DB90062E355 /* MyMarvelHeroes */ = {
 			isa = PBXGroup;
 			children = (
+				FE4028AA2219BB480062E355 /* Extensions */,
+				FE40288722175F200062E355 /* Supporting Files */,
+				FE40288622175F0E0062E355 /* Networking */,
+				FE40288522175F020062E355 /* CoreData */,
+				FE40288422175EF50062E355 /* Views */,
+				FE40288322175EE80062E355 /* Controllers */,
+				FE40288222175ED90062E355 /* Models */,
 				FE40287022175DB90062E355 /* AppDelegate.swift */,
-				FE40287222175DB90062E355 /* ViewController.swift */,
 				FE40287422175DB90062E355 /* Main.storyboard */,
 				FE40287722175DBB0062E355 /* Assets.xcassets */,
 				FE40287922175DBB0062E355 /* LaunchScreen.storyboard */,
-				FE40287C22175DBB0062E355 /* Info.plist */,
 			);
 			path = MyMarvelHeroes;
+			sourceTree = "<group>";
+		};
+		FE40288222175ED90062E355 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				FE4028AE2219D2D70062E355 /* Hero.swift */,
+				FE4028B02219D3F80062E355 /* Thumbnail.swift */,
+				FE4028B22219D5480062E355 /* Comics.swift */,
+				FE4028B42219D5FB0062E355 /* Stories.swift */,
+				FE4028B6221A3AA20062E355 /* Series.swift */,
+				FE4028B8221A3AC40062E355 /* Events.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		FE40288322175EE80062E355 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				FE40287222175DB90062E355 /* ViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		FE40288422175EF50062E355 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		FE40288522175F020062E355 /* CoreData */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = CoreData;
+			sourceTree = "<group>";
+		};
+		FE40288622175F0E0062E355 /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				FE4028A42219B45D0062E355 /* Manager */,
+				FE40289E2219AA950062E355 /* EndPoint */,
+				FE40288F221767190062E355 /* Service */,
+				FE402888221760B30062E355 /* Enconding */,
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
+		FE40288722175F200062E355 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				FE40287C22175DBB0062E355 /* Info.plist */,
+			);
+			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		FE402888221760B30062E355 /* Enconding */ = {
+			isa = PBXGroup;
+			children = (
+				FE402889221760C60062E355 /* ParameterEnconding.swift */,
+				FE40288B221761F60062E355 /* URLParameterEncoder.swift */,
+				FE40288D221763750062E355 /* JSONParameterEncoder.swift */,
+			);
+			path = Enconding;
+			sourceTree = "<group>";
+		};
+		FE40288F221767190062E355 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				FE4028902217674C0062E355 /* EndPointType.swift */,
+				FE4028922217681E0062E355 /* HTTPMethod.swift */,
+				FE402894221768800062E355 /* HTTPTask.swift */,
+				FE402896221768A20062E355 /* HTTPHeaders.swift */,
+				FE40289822176B6A0062E355 /* NetworkRouter.swift */,
+				FE40289A22176C3A0062E355 /* NetworkLogger.swift */,
+				FE40289C22176CC50062E355 /* Router.swift */,
+				FE4028A62219B5340062E355 /* NetworkEnviroment.swift */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		FE40289E2219AA950062E355 /* EndPoint */ = {
+			isa = PBXGroup;
+			children = (
+				FE40289F2219AAA50062E355 /* MarvelAPI */,
+			);
+			path = EndPoint;
+			sourceTree = "<group>";
+		};
+		FE40289F2219AAA50062E355 /* MarvelAPI */ = {
+			isa = PBXGroup;
+			children = (
+				FE4028A02219AE670062E355 /* MarvelAPI.swift */,
+				FE4028A22219AE7A0062E355 /* MarvelAPI+Constants.swift */,
+			);
+			path = MarvelAPI;
+			sourceTree = "<group>";
+		};
+		FE4028A42219B45D0062E355 /* Manager */ = {
+			isa = PBXGroup;
+			children = (
+				FE4028A52219B4800062E355 /* MarvelAPI */,
+			);
+			path = Manager;
+			sourceTree = "<group>";
+		};
+		FE4028A52219B4800062E355 /* MarvelAPI */ = {
+			isa = PBXGroup;
+			children = (
+				FE4028A82219B61B0062E355 /* MarvelAPIManager.swift */,
+			);
+			path = MarvelAPI;
+			sourceTree = "<group>";
+		};
+		FE4028AA2219BB480062E355 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				FE4028AB2219BB730062E355 /* String */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		FE4028AB2219BB730062E355 /* String */ = {
+			isa = PBXGroup;
+			children = (
+				FE4028AC2219BBA30062E355 /* String+MD5.swift */,
+			);
+			path = String;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -135,8 +310,29 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FE402897221768A20062E355 /* HTTPHeaders.swift in Sources */,
+				FE4028A32219AE7A0062E355 /* MarvelAPI+Constants.swift in Sources */,
+				FE40288E221763750062E355 /* JSONParameterEncoder.swift in Sources */,
+				FE40288C221761F60062E355 /* URLParameterEncoder.swift in Sources */,
+				FE4028932217681E0062E355 /* HTTPMethod.swift in Sources */,
+				FE4028B32219D5480062E355 /* Comics.swift in Sources */,
+				FE4028B9221A3AC40062E355 /* Events.swift in Sources */,
+				FE4028B52219D5FB0062E355 /* Stories.swift in Sources */,
+				FE40289D22176CC50062E355 /* Router.swift in Sources */,
+				FE4028B7221A3AA20062E355 /* Series.swift in Sources */,
+				FE4028912217674C0062E355 /* EndPointType.swift in Sources */,
+				FE402895221768800062E355 /* HTTPTask.swift in Sources */,
+				FE4028A12219AE670062E355 /* MarvelAPI.swift in Sources */,
+				FE4028AD2219BBA30062E355 /* String+MD5.swift in Sources */,
+				FE4028A72219B5340062E355 /* NetworkEnviroment.swift in Sources */,
+				FE4028AF2219D2D70062E355 /* Hero.swift in Sources */,
 				FE40287322175DB90062E355 /* ViewController.swift in Sources */,
+				FE40289922176B6A0062E355 /* NetworkRouter.swift in Sources */,
+				FE40288A221760C60062E355 /* ParameterEnconding.swift in Sources */,
+				FE4028A92219B61B0062E355 /* MarvelAPIManager.swift in Sources */,
+				FE4028B12219D3F80062E355 /* Thumbnail.swift in Sources */,
 				FE40287122175DB90062E355 /* AppDelegate.swift in Sources */,
+				FE40289B22176C3A0062E355 /* NetworkLogger.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -284,7 +480,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 3TBYKSQUS6;
-				INFOPLIST_FILE = MyMarvelHeroes/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/MyMarvelHeroes/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -302,7 +498,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 3TBYKSQUS6;
-				INFOPLIST_FILE = MyMarvelHeroes/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/MyMarvelHeroes/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
