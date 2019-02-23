@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		FE40287122175DB90062E355 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE40287022175DB90062E355 /* AppDelegate.swift */; };
-		FE40287322175DB90062E355 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE40287222175DB90062E355 /* ViewController.swift */; };
 		FE40287622175DB90062E355 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FE40287422175DB90062E355 /* Main.storyboard */; };
 		FE40287822175DBB0062E355 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FE40287722175DBB0062E355 /* Assets.xcassets */; };
 		FE40287B22175DBB0062E355 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FE40287922175DBB0062E355 /* LaunchScreen.storyboard */; };
@@ -33,12 +32,14 @@
 		FE4028B52219D5FB0062E355 /* Stories.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE4028B42219D5FB0062E355 /* Stories.swift */; };
 		FE4028B7221A3AA20062E355 /* Series.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE4028B6221A3AA20062E355 /* Series.swift */; };
 		FE4028B9221A3AC40062E355 /* Events.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE4028B8221A3AC40062E355 /* Events.swift */; };
+		FE4028BB221B05C00062E355 /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE4028BA221B05C00062E355 /* TabBarViewController.swift */; };
+		FE4028BD221B05FD0062E355 /* HeroesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE4028BC221B05FD0062E355 /* HeroesViewController.swift */; };
+		FE4028BF221B06990062E355 /* MyHeroesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE4028BE221B06990062E355 /* MyHeroesViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		FE40286D22175DB90062E355 /* MyMarvelHeroes.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyMarvelHeroes.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FE40287022175DB90062E355 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		FE40287222175DB90062E355 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		FE40287522175DB90062E355 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		FE40287722175DBB0062E355 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FE40287A22175DBB0062E355 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -64,6 +65,9 @@
 		FE4028B42219D5FB0062E355 /* Stories.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Stories.swift; sourceTree = "<group>"; };
 		FE4028B6221A3AA20062E355 /* Series.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Series.swift; sourceTree = "<group>"; };
 		FE4028B8221A3AC40062E355 /* Events.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Events.swift; sourceTree = "<group>"; };
+		FE4028BA221B05C00062E355 /* TabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
+		FE4028BC221B05FD0062E355 /* HeroesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroesViewController.swift; sourceTree = "<group>"; };
+		FE4028BE221B06990062E355 /* MyHeroesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyHeroesViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -127,7 +131,9 @@
 		FE40288322175EE80062E355 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				FE40287222175DB90062E355 /* ViewController.swift */,
+				FE4028BA221B05C00062E355 /* TabBarViewController.swift */,
+				FE4028BC221B05FD0062E355 /* HeroesViewController.swift */,
+				FE4028BE221B06990062E355 /* MyHeroesViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -311,6 +317,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FE402897221768A20062E355 /* HTTPHeaders.swift in Sources */,
+				FE4028BF221B06990062E355 /* MyHeroesViewController.swift in Sources */,
 				FE4028A32219AE7A0062E355 /* MarvelAPI+Constants.swift in Sources */,
 				FE40288E221763750062E355 /* JSONParameterEncoder.swift in Sources */,
 				FE40288C221761F60062E355 /* URLParameterEncoder.swift in Sources */,
@@ -325,9 +332,10 @@
 				FE4028A12219AE670062E355 /* MarvelAPI.swift in Sources */,
 				FE4028AD2219BBA30062E355 /* String+MD5.swift in Sources */,
 				FE4028A72219B5340062E355 /* NetworkEnviroment.swift in Sources */,
+				FE4028BB221B05C00062E355 /* TabBarViewController.swift in Sources */,
 				FE4028AF2219D2D70062E355 /* Hero.swift in Sources */,
-				FE40287322175DB90062E355 /* ViewController.swift in Sources */,
 				FE40289922176B6A0062E355 /* NetworkRouter.swift in Sources */,
+				FE4028BD221B05FD0062E355 /* HeroesViewController.swift in Sources */,
 				FE40288A221760C60062E355 /* ParameterEnconding.swift in Sources */,
 				FE4028A92219B61B0062E355 /* MarvelAPIManager.swift in Sources */,
 				FE4028B12219D3F80062E355 /* Thumbnail.swift in Sources */,
