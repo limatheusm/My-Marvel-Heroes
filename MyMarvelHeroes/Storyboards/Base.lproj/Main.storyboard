@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Z6Q-Ip-Md5">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Tab Bar View Controller-->
+        <scene sceneID="Z3k-88-Ggz">
+            <objects>
+                <tabBarController id="Z6Q-Ip-Md5" customClass="TabBarViewController" customModule="MyMarvelHeroes" customModuleProvider="target" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="5Op-ON-OPf">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" name="primary"/>
+                        <color key="tintColor" name="secondary"/>
+                        <color key="barTintColor" name="primaryDark"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="ksI-qx-ZN7" kind="relationship" relationship="viewControllers" id="hEQ-Uf-EBo"/>
+                        <segue destination="wvw-2t-fxx" kind="relationship" relationship="viewControllers" id="DTg-lQ-0px"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="AXo-hy-cgv" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="874" y="133"/>
+        </scene>
+        <!--Heroes-->
+        <scene sceneID="aje-8M-4eQ">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Heroes" id="ksI-qx-ZN7" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item" id="RTr-Gh-h1I"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="rUW-Xe-CED" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1824.8" y="-199.25037481259372"/>
+        </scene>
+        <!--MyHeroes-->
+        <scene sceneID="vj3-TV-OG4">
+            <objects>
+                <viewControllerPlaceholder storyboardName="MyHeroes" id="wvw-2t-fxx" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item" id="2i5-wX-af3"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="7S3-gX-klb" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1824.8" y="465.51724137931041"/>
+        </scene>
+    </scenes>
+    <resources>
+        <namedColor name="primary">
+            <color red="0.1289999932050705" green="0.1289999932050705" blue="0.1289999932050705" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="primaryDark">
+            <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="secondary">
+            <color red="0.82745098039215681" green="0.18431372549019609" blue="0.18431372549019609" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>
