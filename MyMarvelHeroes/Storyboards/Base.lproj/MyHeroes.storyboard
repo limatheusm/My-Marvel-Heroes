@@ -38,7 +38,7 @@
             </objects>
             <point key="canvasLocation" x="1824.8" y="465.51724137931041"/>
         </scene>
-        <!--My Heroes-->
+        <!--My Marvel Heroes-->
         <scene sceneID="thS-tj-fc9">
             <objects>
                 <viewController id="btY-XS-V9R" customClass="MyHeroesViewController" customModule="MyMarvelHeroes" customModuleProvider="target" sceneMemberID="viewController">
@@ -48,7 +48,7 @@
                         <color key="backgroundColor" name="primary"/>
                         <viewLayoutGuide key="safeArea" id="tJC-gR-OsQ"/>
                     </view>
-                    <navigationItem key="navigationItem" title="My Heroes" largeTitleDisplayMode="always" id="6ea-yj-vzR"/>
+                    <navigationItem key="navigationItem" title="My Marvel Heroes" largeTitleDisplayMode="always" id="6ea-yj-vzR"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KnM-Hy-iyr" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

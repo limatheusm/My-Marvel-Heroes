@@ -1,5 +1,5 @@
 //
-//  HeroesViewController.swift
+//  TabBarViewController.swift
 //  MyMarvelHeroes
 //
 //  Created by Matheus Lima on 18/02/19.
@@ -8,14 +8,13 @@
 
 import UIKit
 
-class HeroesViewController: UIViewController {
+class TabBarViewController: UITabBarController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
     }
-    
 
     /*
     // MARK: - Navigation

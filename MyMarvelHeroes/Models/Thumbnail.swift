@@ -12,6 +12,11 @@ struct Thumbnail: Codable {
     let path: String?
     let ext: String?
     
+    var url: String? {
+        guard path != nil, ext != nil else { return nil }
+        return path! + "/\(MarvelAPI.Constants.ThumbnailSize)." + ext!
+    }
+    
     enum CodingKeys: String, CodingKey {
         case path
         case ext = "extension"

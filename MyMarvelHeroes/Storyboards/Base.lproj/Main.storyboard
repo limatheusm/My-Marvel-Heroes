@@ -38,7 +38,7 @@
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rUW-Xe-CED" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1824.8" y="-199.25037481259372"/>
+            <point key="canvasLocation" x="1547" y="30"/>
         </scene>
         <!--MyHeroes-->
         <scene sceneID="vj3-TV-OG4">
@@ -48,7 +48,7 @@
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7S3-gX-klb" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1824.8" y="465.51724137931041"/>
+            <point key="canvasLocation" x="1547" y="217"/>
         </scene>
     </scenes>
     <resources>

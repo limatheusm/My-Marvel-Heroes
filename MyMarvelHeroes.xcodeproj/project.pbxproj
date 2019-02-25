@@ -38,6 +38,9 @@
 		FE4EEEB12221C1AF00B0E9CE /* HeroCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE4EEEB02221C1AF00B0E9CE /* HeroCollectionViewCell.swift */; };
 		FE4EEEB52221C57E00B0E9CE /* Heroes.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FE4EEEB32221C57E00B0E9CE /* Heroes.storyboard */; };
 		FE4EEEB82221C6D200B0E9CE /* MyHeroes.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FE4EEEB62221C6D200B0E9CE /* MyHeroes.storyboard */; };
+		FE4EEEBE2221D26100B0E9CE /* HeroesViewController+CollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE4EEEBD2221D26100B0E9CE /* HeroesViewController+CollectionView.swift */; };
+		FE4EEEC2222207E900B0E9CE /* MarvelDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE4EEEC1222207E900B0E9CE /* MarvelDataSource.swift */; };
+		FE4EEEC42222F23B00B0E9CE /* ImageCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE4EEEC32222F23B00B0E9CE /* ImageCache.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -74,6 +77,9 @@
 		FE4EEEB02221C1AF00B0E9CE /* HeroCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroCollectionViewCell.swift; sourceTree = "<group>"; };
 		FE4EEEB42221C57E00B0E9CE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Heroes.storyboard; sourceTree = "<group>"; };
 		FE4EEEB72221C6D200B0E9CE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/MyHeroes.storyboard; sourceTree = "<group>"; };
+		FE4EEEBD2221D26100B0E9CE /* HeroesViewController+CollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "HeroesViewController+CollectionView.swift"; sourceTree = "<group>"; };
+		FE4EEEC1222207E900B0E9CE /* MarvelDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarvelDataSource.swift; sourceTree = "<group>"; };
+		FE4EEEC32222F23B00B0E9CE /* ImageCache.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCache.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -129,6 +135,8 @@
 				FE4028B42219D5FB0062E355 /* Stories.swift */,
 				FE4028B6221A3AA20062E355 /* Series.swift */,
 				FE4028B8221A3AC40062E355 /* Events.swift */,
+				FE4EEEC1222207E900B0E9CE /* MarvelDataSource.swift */,
+				FE4EEEC32222F23B00B0E9CE /* ImageCache.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -136,9 +144,9 @@
 		FE40288322175EE80062E355 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				FE4028BA221B05C00062E355 /* TabBarViewController.swift */,
-				FE4028BC221B05FD0062E355 /* HeroesViewController.swift */,
-				FE4028BE221B06990062E355 /* MyHeroesViewController.swift */,
+				FE4EEEBC2221D22A00B0E9CE /* MyHeroes */,
+				FE4EEEBA2221D21C00B0E9CE /* Heroes */,
+				FE4EEEB92221D20200B0E9CE /* TabBar */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -262,6 +270,31 @@
 			path = Storyboards;
 			sourceTree = "<group>";
 		};
+		FE4EEEB92221D20200B0E9CE /* TabBar */ = {
+			isa = PBXGroup;
+			children = (
+				FE4028BA221B05C00062E355 /* TabBarViewController.swift */,
+			);
+			path = TabBar;
+			sourceTree = "<group>";
+		};
+		FE4EEEBA2221D21C00B0E9CE /* Heroes */ = {
+			isa = PBXGroup;
+			children = (
+				FE4028BC221B05FD0062E355 /* HeroesViewController.swift */,
+				FE4EEEBD2221D26100B0E9CE /* HeroesViewController+CollectionView.swift */,
+			);
+			path = Heroes;
+			sourceTree = "<group>";
+		};
+		FE4EEEBC2221D22A00B0E9CE /* MyHeroes */ = {
+			isa = PBXGroup;
+			children = (
+				FE4028BE221B06990062E355 /* MyHeroesViewController.swift */,
+			);
+			path = MyHeroes;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -272,6 +305,8 @@
 				FE40286922175DB90062E355 /* Sources */,
 				FE40286A22175DB90062E355 /* Frameworks */,
 				FE40286B22175DB90062E355 /* Resources */,
+				FE4EEEBF2221E94800B0E9CE /* ShellScript */,
+				FE4EEEC02221E97500B0E9CE /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -330,6 +365,43 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		FE4EEEBF2221E94800B0E9CE /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\nTAGS=\"TODO:|FIXME:\"\nERRORTAG=\"ERROR:\"\nfind \"${SRCROOT}\" \\( -name \"*.h\" -or -name \"*.m\" -or -name \"*.swift\" \\) -print0 | xargs -0 egrep --with-filename --line-number --only-matching \"($TAGS).*\\$|($ERRORTAG).*\\$\" | perl -p -e \"s/($TAGS)/ warning: \\$1/\" | perl -p -e \"s/($ERRORTAG)/ error: \\$1/\"\n";
+		};
+		FE4EEEC02221E97500B0E9CE /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		FE40286922175DB90062E355 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -338,6 +410,7 @@
 				FE402897221768A20062E355 /* HTTPHeaders.swift in Sources */,
 				FE4028BF221B06990062E355 /* MyHeroesViewController.swift in Sources */,
 				FE4028A32219AE7A0062E355 /* MarvelAPI+Constants.swift in Sources */,
+				FE4EEEC2222207E900B0E9CE /* MarvelDataSource.swift in Sources */,
 				FE40288E221763750062E355 /* JSONParameterEncoder.swift in Sources */,
 				FE40288C221761F60062E355 /* URLParameterEncoder.swift in Sources */,
 				FE4028932217681E0062E355 /* HTTPMethod.swift in Sources */,
@@ -352,6 +425,7 @@
 				FE4028A12219AE670062E355 /* MarvelAPI.swift in Sources */,
 				FE4028AD2219BBA30062E355 /* String+MD5.swift in Sources */,
 				FE4028A72219B5340062E355 /* NetworkEnviroment.swift in Sources */,
+				FE4EEEBE2221D26100B0E9CE /* HeroesViewController+CollectionView.swift in Sources */,
 				FE4028BB221B05C00062E355 /* TabBarViewController.swift in Sources */,
 				FE4028AF2219D2D70062E355 /* Hero.swift in Sources */,
 				FE40289922176B6A0062E355 /* NetworkRouter.swift in Sources */,
@@ -361,6 +435,7 @@
 				FE4028B12219D3F80062E355 /* Thumbnail.swift in Sources */,
 				FE40287122175DB90062E355 /* AppDelegate.swift in Sources */,
 				FE40289B22176C3A0062E355 /* NetworkLogger.swift in Sources */,
+				FE4EEEC42222F23B00B0E9CE /* ImageCache.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

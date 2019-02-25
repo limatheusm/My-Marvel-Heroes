@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import UIKit
 
 enum NetworkResponse: String {
     case success
@@ -18,6 +19,7 @@ enum NetworkResponse: String {
     case unableToDecode = "We could not decode the response"
     case poorNetworkConnection = "Please check your network connection"
     case okStatusNotFound = "Marvel API returned an error"
+    case imageNotAvailable = "Image is not available"
 }
 
 enum Result<T> {
@@ -72,6 +74,42 @@ final class MarvelAPIManager {
                 completion(.failure(networkFailureError))
             }
         }
+    }
+    
+    func downloadThumbnail(from url: String?, completion: @escaping (_ result: Result<UIImage?>) -> Void) {
+        /* Check if contain available url and image from api */
+        guard let url = url, !url.contains(MarvelAPI.Constants.ImageNotAvailable) else {
+            completion(.failure(NetworkResponse.imageNotAvailable.rawValue))
+            return
+        }
+        
+        /* Check if image is already in the cache */
+        if let imageCache = MarvelDataSource.sharedInstance.cacheImages.object(forKey: url as NSString) {
+            completion(.success(imageCache.image))
+            return
+        }
+        
+        self.router.request(.downloadThumb(url), completion: { (data, response, error) in
+            switch self.handleNetworkResponse(response, error) {
+            case .success:
+                guard let imageData = data else {
+                    completion(.failure(NetworkResponse.noData.rawValue))
+                    return
+                }
+                
+                guard let uiImage = UIImage(data: imageData) else {
+                    completion(.failure(NetworkResponse.failed.rawValue))
+                    return
+                }
+                
+                /* Cache the image */
+                MarvelDataSource.sharedInstance.cacheImages.setObject(ImageCache(uiImage), forKey: url as NSString)
+                completion(.success(uiImage))
+                
+            case .failure(let networkFailureError):
+                completion(.failure(networkFailureError))
+            }
+        })
     }
 }
 

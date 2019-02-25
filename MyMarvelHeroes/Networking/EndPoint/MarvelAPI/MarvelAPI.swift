@@ -11,6 +11,7 @@ import Foundation
 
 public enum MarvelAPI {
     case getCharacters(_ nameStartsWith: String?, _ offset: Int)
+    case downloadThumb(_ fromUrl: String)
 }
 
 // MARK: - EndPointType Protocol
@@ -28,7 +29,15 @@ extension MarvelAPI: EndPointType {
     }
     
     public var baseURL: URL {
-        guard let url = URL(string: environmentBaseURL) else { fatalError("baseURL could not be configured.") }
+        var baseURL = ""
+        switch self {
+        case .downloadThumb(let url):
+            baseURL = url
+        default:
+            baseURL = environmentBaseURL
+        }
+        
+        guard let url = URL(string: baseURL) else { fatalError("baseURL could not be configured.") }
         return url
     }
     
@@ -36,12 +45,16 @@ extension MarvelAPI: EndPointType {
         switch self {
         case .getCharacters:
             return Constants.PathsMethods.Characters
+        default:
+            return ""
         }
     }
     
     public var httpMethod: HTTPMethod {
         switch self {
         case .getCharacters:
+            return .get
+        case .downloadThumb:
             return .get
         }
     }
@@ -64,6 +77,8 @@ extension MarvelAPI: EndPointType {
             }
             
             return .requestParameters(bodyParameters: nil, urlParameters: urlParameters)
+        case .downloadThumb(let url):
+            return .download(url)
         }
     }
     

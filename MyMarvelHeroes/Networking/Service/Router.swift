@@ -15,7 +15,7 @@ class Router<EndPoint: EndPointType>: NetworkRouter {
         let session = URLSession.shared
         do {
             let request = try buildRequest(from: route)
-            NetworkLogger.log(request)
+//            NetworkLogger.log(request)
             task = session.dataTask(with: request, completionHandler: completion)
         } catch {
             completion(nil, nil, error)
@@ -47,6 +47,9 @@ extension Router {
             case .requestParametersAndHeaders(bodyParameters: let bodyParameters, urlParameters: let urlParameters, additionalHeaders: let additionalHeaders):
                 addAdditionalHeaders(additionalHeaders, request: &request)
                 try configureParameters(bodyParameters: bodyParameters, urlParameters: urlParameters, request: &request)
+            
+            case .download:
+                request.url = route.baseURL
             }
             
             return request

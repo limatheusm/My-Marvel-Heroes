@@ -14,7 +14,6 @@
         <!--Heroes-->
         <scene sceneID="CIa-BG-6rw">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="B6M-pH-xuw" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="0d4-0y-dnM" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Heroes" image="marvelTabIcon" id="ubR-pI-6ef"/>
                     <toolbarItems/>
@@ -39,24 +38,109 @@
                         <segue destination="7uh-8y-bHH" kind="relationship" relationship="rootViewController" id="J2X-PD-IGo"/>
                     </connections>
                 </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="B6M-pH-xuw" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1824.8" y="-199.25037481259372"/>
         </scene>
-        <!--Heroes-->
+        <!--Marvel Heroes-->
         <scene sceneID="akI-dS-1kd">
             <objects>
                 <viewController id="7uh-8y-bHH" customClass="HeroesViewController" customModule="MyMarvelHeroes" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="dDd-br-UDb">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="12m-HR-qpw">
+                                <rect key="frame" x="0.0" y="116" width="375" height="551"/>
+                                <color key="backgroundColor" red="0.89803921568627454" green="0.89803921568627454" blue="0.89803921568627454" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="Aln-91-5F2">
+                                    <size key="itemSize" width="144" height="145"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="HeroCollectionViewCellID" id="5SN-Vg-UDL" customClass="HeroCollectionViewCell" customModule="MyMarvelHeroes" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="144" height="145"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
+                                            <rect key="frame" x="0.0" y="0.0" width="144" height="145"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Q7G-Zl-Gu6">
+                                                    <rect key="frame" x="0.0" y="0.0" width="144" height="145"/>
+                                                </imageView>
+                                                <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="white" translatesAutoresizingMaskIntoConstraints="NO" id="fP7-Dt-GgM">
+                                                    <rect key="frame" x="62" y="62.5" width="20" height="20"/>
+                                                    <color key="color" name="secondary"/>
+                                                </activityIndicatorView>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BFB-t2-7LO">
+                                                    <rect key="frame" x="0.0" y="105" width="144" height="40"/>
+                                                    <subviews>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PPJ-5d-6I0">
+                                                            <rect key="frame" x="55.5" y="11" width="33" height="18"/>
+                                                            <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="13"/>
+                                                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                    </subviews>
+                                                    <color key="backgroundColor" name="primaryDarkTransparent"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="40" id="1cx-kv-Ohv"/>
+                                                        <constraint firstItem="PPJ-5d-6I0" firstAttribute="centerY" secondItem="BFB-t2-7LO" secondAttribute="centerY" id="uv8-Pd-v53"/>
+                                                        <constraint firstItem="PPJ-5d-6I0" firstAttribute="centerX" secondItem="BFB-t2-7LO" secondAttribute="centerX" id="zfq-Lg-CX7"/>
+                                                    </constraints>
+                                                </view>
+                                            </subviews>
+                                        </view>
+                                        <color key="backgroundColor" name="primaryLight"/>
+                                        <constraints>
+                                            <constraint firstItem="Q7G-Zl-Gu6" firstAttribute="leading" secondItem="5SN-Vg-UDL" secondAttribute="leading" id="0SY-uJ-PRP"/>
+                                            <constraint firstItem="fP7-Dt-GgM" firstAttribute="centerY" secondItem="5SN-Vg-UDL" secondAttribute="centerY" id="6X2-q7-P5L"/>
+                                            <constraint firstItem="Q7G-Zl-Gu6" firstAttribute="top" secondItem="5SN-Vg-UDL" secondAttribute="top" id="7cz-pZ-c9t"/>
+                                            <constraint firstAttribute="bottom" secondItem="BFB-t2-7LO" secondAttribute="bottom" id="938-xa-FHW"/>
+                                            <constraint firstItem="BFB-t2-7LO" firstAttribute="leading" secondItem="5SN-Vg-UDL" secondAttribute="leading" id="Bro-mV-sBi"/>
+                                            <constraint firstAttribute="bottom" secondItem="Q7G-Zl-Gu6" secondAttribute="bottom" id="GkV-k6-IV2"/>
+                                            <constraint firstAttribute="trailing" secondItem="Q7G-Zl-Gu6" secondAttribute="trailing" id="SfK-yj-s9e"/>
+                                            <constraint firstItem="fP7-Dt-GgM" firstAttribute="centerX" secondItem="5SN-Vg-UDL" secondAttribute="centerX" id="h1E-Nb-Do4"/>
+                                            <constraint firstAttribute="trailing" secondItem="BFB-t2-7LO" secondAttribute="trailing" id="uPc-3f-azS"/>
+                                        </constraints>
+                                        <connections>
+                                            <outlet property="activityIndicator" destination="fP7-Dt-GgM" id="ldt-Bu-n9p"/>
+                                            <outlet property="nameLabel" destination="PPJ-5d-6I0" id="UP0-ZN-hNM"/>
+                                            <outlet property="thumbImageView" destination="Q7G-Zl-Gu6" id="cwY-b2-2Aj"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                </cells>
+                                <connections>
+                                    <outlet property="dataSource" destination="7uh-8y-bHH" id="RZG-Rh-Vuy"/>
+                                    <outlet property="delegate" destination="7uh-8y-bHH" id="G1b-2U-NY4"/>
+                                </connections>
+                            </collectionView>
+                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="white" translatesAutoresizingMaskIntoConstraints="NO" id="vP5-Rj-4dy">
+                                <rect key="frame" x="177.5" y="323.5" width="20" height="20"/>
+                            </activityIndicatorView>
+                        </subviews>
                         <color key="backgroundColor" name="primary"/>
+                        <constraints>
+                            <constraint firstItem="vP5-Rj-4dy" firstAttribute="centerX" secondItem="dDd-br-UDb" secondAttribute="centerX" id="4bd-Sm-K0x"/>
+                            <constraint firstItem="12m-HR-qpw" firstAttribute="leading" secondItem="5QM-Ty-TBJ" secondAttribute="leading" id="7GQ-dZ-hTn"/>
+                            <constraint firstItem="5QM-Ty-TBJ" firstAttribute="trailing" secondItem="12m-HR-qpw" secondAttribute="trailing" id="GkT-K7-rdZ"/>
+                            <constraint firstItem="vP5-Rj-4dy" firstAttribute="centerY" secondItem="dDd-br-UDb" secondAttribute="centerY" id="lBd-5X-f6m"/>
+                            <constraint firstItem="12m-HR-qpw" firstAttribute="top" secondItem="5QM-Ty-TBJ" secondAttribute="top" id="mdb-oj-VsV"/>
+                            <constraint firstItem="5QM-Ty-TBJ" firstAttribute="bottom" secondItem="12m-HR-qpw" secondAttribute="bottom" id="oZk-SL-bIR"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="5QM-Ty-TBJ"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Heroes" id="F2k-JY-huc"/>
+                    <navigationItem key="navigationItem" title="Marvel Heroes" id="F2k-JY-huc"/>
+                    <connections>
+                        <outlet property="activityIndicator" destination="vP5-Rj-4dy" id="MSh-bM-w7X"/>
+                        <outlet property="collectionView" destination="12m-HR-qpw" id="kfx-I7-JEe"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SgL-pf-Arw" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2604" y="-199"/>
+            <point key="canvasLocation" x="2604" y="-199.25037481259372"/>
         </scene>
     </scenes>
     <resources>
@@ -69,6 +153,15 @@
         </namedColor>
         <namedColor name="primaryDark">
             <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="primaryDarkTransparent">
+            <color red="0.0" green="0.0" blue="0.0" alpha="0.89999997615814209" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="primaryLight">
+            <color red="0.28200000524520874" green="0.28200000524520874" blue="0.28200000524520874" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="secondary">
+            <color red="0.82745098039215681" green="0.18431372549019609" blue="0.18431372549019609" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
     </resources>
 </document>
