@@ -23,6 +23,7 @@ extension MarvelAPI {
         static let BaseURLStaging = ""
         static let ThumbnailSize = "standard_amazing"
         static let ImageNotAvailable = "image_not_available"
+        static let InfiniteScrollLimiar = 5
         
         // MARK: - Request constants
         

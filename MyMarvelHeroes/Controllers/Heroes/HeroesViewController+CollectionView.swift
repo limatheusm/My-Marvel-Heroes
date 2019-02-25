@@ -24,6 +24,15 @@ extension HeroesViewController: UICollectionViewDataSource {
         guard let cell = cell as? HeroCollectionViewCell else { return }
         let imageURL = heroes[indexPath.row].thumbnail?.url
         cell.downloadAndSetThumb(from: imageURL)
+        
+        // MARK: - Infinite Scroll
+        if indexPath.row == heroes.count - MarvelAPI.Constants.InfiniteScrollLimiar &&
+                            !loadingHeroes &&
+                            heroes.count != total
+        {
+            currentPage += 1
+            loadHeroes()
+        }
     }
 }
 

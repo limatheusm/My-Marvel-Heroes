@@ -18,19 +18,22 @@ class HeroesViewController: UIViewController {
     var heroes: [Hero] = []
     var currentPage = 0
     var total = 0
+    var loadingHeroes = false
+    var firstLoading = true
     
     // MARK: - View Lifecycle
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        setUpHeroes()
+        loadHeroes()
     }
     
-    // MARK: - setUp functions
+    // MARK: - load functions
     
-    fileprivate func setUpHeroes() {
+    func loadHeroes() {
         setLoading(true)
-        MarvelAPIManager.sharedInstance.getHeroes { (result) in
+
+        MarvelAPIManager.sharedInstance.getHeroes(nameStartsWith: nil, page: currentPage) { (result) in
             switch result {
             case .failure(let errorMessage):
                 self.showError(errorMessage)
@@ -42,11 +45,10 @@ class HeroesViewController: UIViewController {
                 
                 self.total = total
                 self.heroes += heroes
-                print("\(self.total) heróis - \(heroesContainer.count!) inseridos")
-                DispatchQueue.main.async {
-                    self.collectionView.reloadData()
-                    self.setLoading(false)
-                }
+            }
+            DispatchQueue.main.async {
+                self.collectionView.reloadData()
+                self.setLoading(false)
             }
         }
     }
@@ -73,10 +75,16 @@ extension HeroesViewController {
     }
     
     func setLoading(_ loading: Bool) {
-        if loading {
+        loadingHeroes = loading
+        if loading && firstLoading {
             activityIndicator.startAnimating()
         } else {
             activityIndicator.stopAnimating()
+            firstLoading = false
         }
+    }
+    
+    func scrollToTop() {
+        self.collectionView.setContentOffset(CGPoint(x: 0, y: 0), animated: true)
     }
 }
