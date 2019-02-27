@@ -10,20 +10,16 @@ import Foundation
 import UIKit
 
 extension HeroesViewController: UISearchBarDelegate {
-    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
-        if searchText.count > 2 {
-            searchHero(with: searchText)
-        }
-    }
-    
     func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
         if let name = searchBar.text {
             searchHero(with: name)
+            searchActivated = true
         }
     }
     
     func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
         searchController.searchBar.text = ""
-        loadHeroes(reset: true, withIndicator: true)
+        loadHeroes(reset: searchActivated, withIndicator: searchActivated)
+        searchActivated = false
     }
 }

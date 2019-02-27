@@ -19,14 +19,22 @@ class HeroesViewController: UIViewController {
     var currentPage = 0
     var total = 0
     var loadingHeroes = false
+    var searchActivated = false
     let searchController = UISearchController(searchResultsController: nil)
+    lazy var noResultsLabel: UILabel = {
+        let label = UILabel()
+        label.textAlignment = .center
+        label.textColor = .gray
+        label.text = "No results"
+        return label
+    }()
     
-    lazy var heroNameSearch: String? = {
+    var heroNameSearch: String? {
         if let searchText = searchController.searchBar.text, !searchText.isEmpty {
             return searchText
         }
         return nil
-    }()
+    }
     
     // MARK: - View Lifecycle
     
@@ -42,7 +50,7 @@ class HeroesViewController: UIViewController {
     fileprivate func setHandleTouchInCollectionView() {
         let tap = UITapGestureRecognizer(target: self, action: #selector(didTapCollectionView(recognizer:)))
         tap.numberOfTapsRequired = 1
-        self.collectionView.addGestureRecognizer(tap)
+        collectionView.addGestureRecognizer(tap)
     }
     
     fileprivate func setUpSearchController() {
@@ -55,6 +63,7 @@ class HeroesViewController: UIViewController {
         searchController.searchBar.barStyle = .blackTranslucent
         searchController.searchBar.keyboardAppearance = .dark
         searchController.searchBar.delegate = self
+        UIBarButtonItem.appearance(whenContainedInInstancesOf:[UISearchBar.self]).tintColor = UIColor(named: "secondary")
 
         navigationItem.searchController = searchController
     }

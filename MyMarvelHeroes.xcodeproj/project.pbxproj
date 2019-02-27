@@ -43,6 +43,7 @@
 		FE4EEEC42222F23B00B0E9CE /* ImageCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE4EEEC32222F23B00B0E9CE /* ImageCache.swift */; };
 		FE4EEEC62224649C00B0E9CE /* HeroesViewController+UISearchBarDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE4EEEC52224649C00B0E9CE /* HeroesViewController+UISearchBarDelegate.swift */; };
 		FE4EEEC92226CEFB00B0E9CE /* UIViewController+Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE4EEEC82226CEFB00B0E9CE /* UIViewController+Alert.swift */; };
+		FE4EEECB2226FD5000B0E9CE /* FooterActivityIndicatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE4EEECA2226FD5000B0E9CE /* FooterActivityIndicatorView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -84,6 +85,7 @@
 		FE4EEEC32222F23B00B0E9CE /* ImageCache.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCache.swift; sourceTree = "<group>"; };
 		FE4EEEC52224649C00B0E9CE /* HeroesViewController+UISearchBarDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "HeroesViewController+UISearchBarDelegate.swift"; sourceTree = "<group>"; };
 		FE4EEEC82226CEFB00B0E9CE /* UIViewController+Alert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Alert.swift"; sourceTree = "<group>"; };
+		FE4EEECA2226FD5000B0E9CE /* FooterActivityIndicatorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FooterActivityIndicatorView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -159,6 +161,7 @@
 			isa = PBXGroup;
 			children = (
 				FE4EEEB02221C1AF00B0E9CE /* HeroCollectionViewCell.swift */,
+				FE4EEECA2226FD5000B0E9CE /* FooterActivityIndicatorView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -437,6 +440,7 @@
 				FE4028B7221A3AA20062E355 /* Series.swift in Sources */,
 				FE4EEEC62224649C00B0E9CE /* HeroesViewController+UISearchBarDelegate.swift in Sources */,
 				FE4028912217674C0062E355 /* EndPointType.swift in Sources */,
+				FE4EEECB2226FD5000B0E9CE /* FooterActivityIndicatorView.swift in Sources */,
 				FE402895221768800062E355 /* HTTPTask.swift in Sources */,
 				FE4028A12219AE670062E355 /* MarvelAPI.swift in Sources */,
 				FE4028AD2219BBA30062E355 /* String+MD5.swift in Sources */,

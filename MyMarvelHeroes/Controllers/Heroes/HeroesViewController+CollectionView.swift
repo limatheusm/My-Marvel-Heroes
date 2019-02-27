@@ -20,6 +20,7 @@ extension HeroesViewController: UICollectionViewDataSource {
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        collectionView.backgroundView = heroes.count == 0 ? noResultsLabel : nil
         return heroes.count
     }
     
@@ -30,18 +31,20 @@ extension HeroesViewController: UICollectionViewDataSource {
     }
     
     func collectionView(_ collectionView: UICollectionView, willDisplay cell: UICollectionViewCell, forItemAt indexPath: IndexPath) {
-        guard let cell = cell as? HeroCollectionViewCell else { return }
-        let imageURL = heroes[indexPath.row].thumbnail?.url
-        cell.downloadAndSetThumb(from: imageURL)
-        
         // MARK: - Infinite Scroll
         if indexPath.row == heroes.count - MarvelAPI.Constants.InfiniteScrollLimiar &&
-                            !loadingHeroes &&
-                            heroes.count < total
+            !loadingHeroes &&
+            heroes.count < total
         {
             currentPage += 1
             loadHeroes()
         }
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
+        let footerView = collectionView.dequeueReusableSupplementaryView(ofKind: UICollectionView.elementKindSectionFooter, withReuseIdentifier: FooterActivityIndicatorView.identifier, for: indexPath) as! FooterActivityIndicatorView
+        footerView.activityIndicator.startAnimating()
+        return footerView
     }
 }
 
@@ -59,5 +62,9 @@ extension HeroesViewController: UICollectionViewDelegateFlowLayout {
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
         return 0
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, referenceSizeForFooterInSection section: Int) -> CGSize {
+        return total > heroes.count ? CGSize(width: collectionView.frame.size.width, height: 50) : CGSize(width: 0, height: 0)
     }
 }

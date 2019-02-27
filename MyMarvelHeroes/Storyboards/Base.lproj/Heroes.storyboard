@@ -56,7 +56,7 @@
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="Aln-91-5F2">
                                     <size key="itemSize" width="144" height="145"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
-                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="50" height="50"/>
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
@@ -114,6 +114,22 @@
                                         </connections>
                                     </collectionViewCell>
                                 </cells>
+                                <collectionReusableView key="sectionFooterView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" reuseIdentifier="footerView" id="85J-r4-gJx" customClass="FooterActivityIndicatorView" customModule="MyMarvelHeroes" customModuleProvider="target">
+                                    <rect key="frame" x="0.0" y="145" width="375" height="50"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" animating="YES" style="white" translatesAutoresizingMaskIntoConstraints="NO" id="07U-y7-IfV">
+                                            <rect key="frame" x="177.5" y="15" width="20" height="20"/>
+                                        </activityIndicatorView>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="07U-y7-IfV" firstAttribute="centerY" secondItem="85J-r4-gJx" secondAttribute="centerY" id="sVJ-uf-Y1O"/>
+                                        <constraint firstItem="07U-y7-IfV" firstAttribute="centerX" secondItem="85J-r4-gJx" secondAttribute="centerX" id="xZh-Bv-Q8v"/>
+                                    </constraints>
+                                    <connections>
+                                        <outlet property="activityIndicator" destination="07U-y7-IfV" id="xAl-Tt-gO0"/>
+                                    </connections>
+                                </collectionReusableView>
                                 <connections>
                                     <outlet property="dataSource" destination="7uh-8y-bHH" id="RZG-Rh-Vuy"/>
                                     <outlet property="delegate" destination="7uh-8y-bHH" id="G1b-2U-NY4"/>
