@@ -10,6 +10,15 @@ import Foundation
 import UIKit
 
 extension HeroesViewController: UICollectionViewDataSource {
+    
+    func scrollViewWillBeginDragging(_ scrollView: UIScrollView) {
+        searchController.searchBar.resignFirstResponder()
+    }
+    
+    @objc func didTapCollectionView(recognizer: UITapGestureRecognizer){
+        searchController.searchBar.resignFirstResponder()
+    }
+    
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return heroes.count
     }
@@ -28,7 +37,7 @@ extension HeroesViewController: UICollectionViewDataSource {
         // MARK: - Infinite Scroll
         if indexPath.row == heroes.count - MarvelAPI.Constants.InfiniteScrollLimiar &&
                             !loadingHeroes &&
-                            heroes.count != total
+                            heroes.count < total
         {
             currentPage += 1
             loadHeroes()

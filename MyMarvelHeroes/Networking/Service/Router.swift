@@ -15,7 +15,7 @@ class Router<EndPoint: EndPointType>: NetworkRouter {
         let session = URLSession.shared
         do {
             let request = try buildRequest(from: route)
-//            NetworkLogger.log(request)
+            NetworkLogger.log(request)
             task = session.dataTask(with: request, completionHandler: completion)
         } catch {
             completion(nil, nil, error)

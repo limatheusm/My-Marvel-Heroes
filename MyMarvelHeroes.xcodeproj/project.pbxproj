@@ -41,6 +41,8 @@
 		FE4EEEBE2221D26100B0E9CE /* HeroesViewController+CollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE4EEEBD2221D26100B0E9CE /* HeroesViewController+CollectionView.swift */; };
 		FE4EEEC2222207E900B0E9CE /* MarvelDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE4EEEC1222207E900B0E9CE /* MarvelDataSource.swift */; };
 		FE4EEEC42222F23B00B0E9CE /* ImageCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE4EEEC32222F23B00B0E9CE /* ImageCache.swift */; };
+		FE4EEEC62224649C00B0E9CE /* HeroesViewController+UISearchBarDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE4EEEC52224649C00B0E9CE /* HeroesViewController+UISearchBarDelegate.swift */; };
+		FE4EEEC92226CEFB00B0E9CE /* UIViewController+Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE4EEEC82226CEFB00B0E9CE /* UIViewController+Alert.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -80,6 +82,8 @@
 		FE4EEEBD2221D26100B0E9CE /* HeroesViewController+CollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "HeroesViewController+CollectionView.swift"; sourceTree = "<group>"; };
 		FE4EEEC1222207E900B0E9CE /* MarvelDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarvelDataSource.swift; sourceTree = "<group>"; };
 		FE4EEEC32222F23B00B0E9CE /* ImageCache.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCache.swift; sourceTree = "<group>"; };
+		FE4EEEC52224649C00B0E9CE /* HeroesViewController+UISearchBarDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "HeroesViewController+UISearchBarDelegate.swift"; sourceTree = "<group>"; };
+		FE4EEEC82226CEFB00B0E9CE /* UIViewController+Alert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Alert.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -246,6 +250,7 @@
 		FE4028AA2219BB480062E355 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				FE4EEEC72226CEE000B0E9CE /* UIViewController */,
 				FE4028AB2219BB730062E355 /* String */,
 			);
 			path = Extensions;
@@ -283,6 +288,7 @@
 			children = (
 				FE4028BC221B05FD0062E355 /* HeroesViewController.swift */,
 				FE4EEEBD2221D26100B0E9CE /* HeroesViewController+CollectionView.swift */,
+				FE4EEEC52224649C00B0E9CE /* HeroesViewController+UISearchBarDelegate.swift */,
 			);
 			path = Heroes;
 			sourceTree = "<group>";
@@ -293,6 +299,14 @@
 				FE4028BE221B06990062E355 /* MyHeroesViewController.swift */,
 			);
 			path = MyHeroes;
+			sourceTree = "<group>";
+		};
+		FE4EEEC72226CEE000B0E9CE /* UIViewController */ = {
+			isa = PBXGroup;
+			children = (
+				FE4EEEC82226CEFB00B0E9CE /* UIViewController+Alert.swift */,
+			);
+			path = UIViewController;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -409,6 +423,7 @@
 			files = (
 				FE402897221768A20062E355 /* HTTPHeaders.swift in Sources */,
 				FE4028BF221B06990062E355 /* MyHeroesViewController.swift in Sources */,
+				FE4EEEC92226CEFB00B0E9CE /* UIViewController+Alert.swift in Sources */,
 				FE4028A32219AE7A0062E355 /* MarvelAPI+Constants.swift in Sources */,
 				FE4EEEC2222207E900B0E9CE /* MarvelDataSource.swift in Sources */,
 				FE40288E221763750062E355 /* JSONParameterEncoder.swift in Sources */,
@@ -420,6 +435,7 @@
 				FE40289D22176CC50062E355 /* Router.swift in Sources */,
 				FE4EEEB12221C1AF00B0E9CE /* HeroCollectionViewCell.swift in Sources */,
 				FE4028B7221A3AA20062E355 /* Series.swift in Sources */,
+				FE4EEEC62224649C00B0E9CE /* HeroesViewController+UISearchBarDelegate.swift in Sources */,
 				FE4028912217674C0062E355 /* EndPointType.swift in Sources */,
 				FE402895221768800062E355 /* HTTPTask.swift in Sources */,
 				FE4028A12219AE670062E355 /* MarvelAPI.swift in Sources */,

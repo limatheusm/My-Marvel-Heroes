@@ -73,7 +73,7 @@ extension MarvelAPI: EndPointType {
             var urlParameters = commonUrlParameters
             urlParameters[Constants.ParametersKeys.Offset] = offset
             if let nameStartsWith = nameStartsWith {
-                urlParameters[Constants.ParametersKeys.NameStartsWith] = nameStartsWith.replacingOccurrences(of: " ", with: "")
+                urlParameters[Constants.ParametersKeys.NameStartsWith] = nameStartsWith
             }
             
             return .requestParameters(bodyParameters: nil, urlParameters: urlParameters)
