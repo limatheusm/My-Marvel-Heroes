@@ -42,16 +42,9 @@ class HeroesViewController: UIViewController {
         super.viewDidLoad()
         loadHeroes(withIndicator: true)
         setUpSearchController()
-        setHandleTouchInCollectionView()
     }
     
     // MARK: - Set Up Functions
-    
-    fileprivate func setHandleTouchInCollectionView() {
-        let tap = UITapGestureRecognizer(target: self, action: #selector(didTapCollectionView(recognizer:)))
-        tap.numberOfTapsRequired = 1
-        collectionView.addGestureRecognizer(tap)
-    }
     
     fileprivate func setUpSearchController() {
         definesPresentationContext = true
@@ -123,10 +116,16 @@ class HeroesViewController: UIViewController {
         }
     }
     
-    
-
-    /*
     // MARK: - Navigation
+
+    func navToHeroDetails(with hero: Hero, heroImage: UIImage?) {
+        let controller = HeroDetailsViewController.instanceFromStoryboard()
+        controller.hero = hero
+        controller.heroImage = heroImage
+        navigationController?.pushViewController(controller, animated: true)
+    }
+    
+    /*
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -161,8 +160,12 @@ extension HeroesViewController {
     }
     
     func scrollToTop(animated: Bool = true) {
-        DispatchQueue.main.async {
+        if Thread.isMainThread {
             self.collectionView.setContentOffset(CGPoint(x: 0, y: 0), animated: animated)
+        } else {
+            DispatchQueue.main.async {
+                self.collectionView.setContentOffset(CGPoint(x: 0, y: 0), animated: animated)
+            }
         }
     }
 }

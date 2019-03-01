@@ -15,10 +15,6 @@ extension HeroesViewController: UICollectionViewDataSource {
         searchController.searchBar.resignFirstResponder()
     }
     
-    @objc func didTapCollectionView(recognizer: UITapGestureRecognizer){
-        searchController.searchBar.resignFirstResponder()
-    }
-    
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         collectionView.backgroundView = heroes.count == 0 ? noResultsLabel : nil
         return heroes.count
@@ -30,8 +26,9 @@ extension HeroesViewController: UICollectionViewDataSource {
         return cell
     }
     
+    // MARK: - Infinite Scroll
+    
     func collectionView(_ collectionView: UICollectionView, willDisplay cell: UICollectionViewCell, forItemAt indexPath: IndexPath) {
-        // MARK: - Infinite Scroll
         if indexPath.row == heroes.count - MarvelAPI.Constants.InfiniteScrollLimiar &&
             !loadingHeroes &&
             heroes.count < total
@@ -45,6 +42,14 @@ extension HeroesViewController: UICollectionViewDataSource {
         let footerView = collectionView.dequeueReusableSupplementaryView(ofKind: UICollectionView.elementKindSectionFooter, withReuseIdentifier: FooterActivityIndicatorView.identifier, for: indexPath) as! FooterActivityIndicatorView
         footerView.activityIndicator.startAnimating()
         return footerView
+    }
+    
+    // MARK: - Select hero
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let hero = heroes[indexPath.row]
+        let heroCell = collectionView.cellForItem(at: indexPath) as! HeroCollectionViewCell
+        navToHeroDetails(with: hero, heroImage: heroCell.thumbImageView.image)
     }
 }
 

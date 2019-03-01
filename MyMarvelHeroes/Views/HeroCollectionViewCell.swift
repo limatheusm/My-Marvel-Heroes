@@ -15,6 +15,13 @@ class HeroCollectionViewCell: UICollectionViewCell {
     
     static let identifier = "HeroCollectionViewCellID"
     
+    /* change opacity when user touches cell */
+    override var isHighlighted: Bool {
+        didSet {
+            self.layer.opacity = isHighlighted ? 0.5 : 1
+        }
+    }
+    
     func prepareCell(with hero: Hero) {
         nameLabel.text = hero.name
         thumbImageView.image = nil

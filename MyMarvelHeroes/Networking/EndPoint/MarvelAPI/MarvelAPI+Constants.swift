@@ -21,7 +21,7 @@ extension MarvelAPI {
         static let BaseURLProduction = "\(APIScheme)://\(APIHost)\(APIPath)"
         static let BaseURLQA = ""
         static let BaseURLStaging = ""
-        static let ThumbnailSize = "standard_amazing"
+        static let ThumbnailSize = "standard_fantastic"
         static let ImageNotAvailable = "image_not_available"
         static let InfiniteScrollLimiar = 5
         

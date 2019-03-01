@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		FE1FC6282228642800B20921 /* HeroDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE1FC6272228642800B20921 /* HeroDetailsViewController.swift */; };
+		FE1FC62A2228649400B20921 /* HeroDetails.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FE1FC6292228649400B20921 /* HeroDetails.storyboard */; };
 		FE40287122175DB90062E355 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE40287022175DB90062E355 /* AppDelegate.swift */; };
 		FE40287622175DB90062E355 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FE40287422175DB90062E355 /* Main.storyboard */; };
 		FE40287822175DBB0062E355 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FE40287722175DBB0062E355 /* Assets.xcassets */; };
@@ -47,6 +49,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		FE1FC6272228642800B20921 /* HeroDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroDetailsViewController.swift; sourceTree = "<group>"; };
+		FE1FC6292228649400B20921 /* HeroDetails.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = HeroDetails.storyboard; sourceTree = "<group>"; };
 		FE40286D22175DB90062E355 /* MyMarvelHeroes.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyMarvelHeroes.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FE40287022175DB90062E355 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FE40287522175DB90062E355 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -99,6 +103,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		FE1FC626222863F900B20921 /* HeroDetails */ = {
+			isa = PBXGroup;
+			children = (
+				FE1FC6272228642800B20921 /* HeroDetailsViewController.swift */,
+			);
+			path = HeroDetails;
+			sourceTree = "<group>";
+		};
 		FE40286422175DB90062E355 = {
 			isa = PBXGroup;
 			children = (
@@ -150,6 +162,7 @@
 		FE40288322175EE80062E355 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				FE1FC626222863F900B20921 /* HeroDetails */,
 				FE4EEEBC2221D22A00B0E9CE /* MyHeroes */,
 				FE4EEEBA2221D21C00B0E9CE /* Heroes */,
 				FE4EEEB92221D20200B0E9CE /* TabBar */,
@@ -274,6 +287,7 @@
 				FE4EEEB32221C57E00B0E9CE /* Heroes.storyboard */,
 				FE40287422175DB90062E355 /* Main.storyboard */,
 				FE40287922175DBB0062E355 /* LaunchScreen.storyboard */,
+				FE1FC6292228649400B20921 /* HeroDetails.storyboard */,
 			);
 			path = Storyboards;
 			sourceTree = "<group>";
@@ -377,6 +391,7 @@
 				FE4EEEB82221C6D200B0E9CE /* MyHeroes.storyboard in Resources */,
 				FE4EEEB52221C57E00B0E9CE /* Heroes.storyboard in Resources */,
 				FE40287622175DB90062E355 /* Main.storyboard in Resources */,
+				FE1FC62A2228649400B20921 /* HeroDetails.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -450,6 +465,7 @@
 				FE4028AF2219D2D70062E355 /* Hero.swift in Sources */,
 				FE40289922176B6A0062E355 /* NetworkRouter.swift in Sources */,
 				FE4028BD221B05FD0062E355 /* HeroesViewController.swift in Sources */,
+				FE1FC6282228642800B20921 /* HeroDetailsViewController.swift in Sources */,
 				FE40288A221760C60062E355 /* ParameterEnconding.swift in Sources */,
 				FE4028A92219B61B0062E355 /* MarvelAPIManager.swift in Sources */,
 				FE4028B12219D3F80062E355 /* Thumbnail.swift in Sources */,
