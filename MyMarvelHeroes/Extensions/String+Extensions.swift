@@ -1,8 +1,8 @@
 //
-//  String+Hash.swift
+//  String+Extensions.swift
 //  MyMarvelHeroes
 //
-//  Created by Matheus Lima on 17/02/19.
+//  Created by Matheus Lima on 03/03/19.
 //  Copyright © 2019 Matheus Lima. All rights reserved.
 //
 

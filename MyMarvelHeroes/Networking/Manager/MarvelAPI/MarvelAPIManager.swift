@@ -39,6 +39,41 @@ final class MarvelAPIManager {
     
     // MARK: - Convenience Methods
     
+    func getHeroArtifacts(type: ArtifactType, heroID: Int, page: Int = 0, completion: @escaping (_ result: Result<ArtifactContainer>) -> Void) {
+        let offset = page * MarvelAPI.Constants.ParametersValues.Limit
+        
+        router.request(.getHeroArtifacts(type, heroID, offset)) { (data, response, error) in
+            switch self.handleNetworkResponse(response, error) {
+            case .success:
+                guard let responseData = data else {
+                    completion(.failure(NetworkResponse.noData.rawValue))
+                    return
+                }
+                
+                do {
+                    let apiResponse = try JSONDecoder().decode(ArtifactDataWrapper.self, from: responseData)
+                    
+                    guard apiResponse.status == MarvelAPI.Constants.ResponseValues.OKStatus else {
+                        completion(.failure(NetworkResponse.okStatusNotFound.rawValue))
+                        return
+                    }
+                    
+                    guard let artifactsData = apiResponse.data else {
+                        completion(.failure(NetworkResponse.noData.rawValue))
+                        return
+                    }
+                    
+                    completion(.success(artifactsData))
+                    
+                } catch {
+                    completion(.failure(NetworkResponse.unableToDecode.rawValue))
+                }
+            case .failure(let networkFailureError):
+                completion(.failure(networkFailureError))
+            }
+        }
+    }
+    
     func getHeroes(nameStartsWith: String? = nil, page: Int = 0, completion: @escaping (_ result: Result<HeroDataContainer>) -> Void) {
         let offset = page * MarvelAPI.Constants.ParametersValues.Limit
         

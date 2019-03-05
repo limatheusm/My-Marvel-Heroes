@@ -21,7 +21,8 @@ extension MarvelAPI {
         static let BaseURLProduction = "\(APIScheme)://\(APIHost)\(APIPath)"
         static let BaseURLQA = ""
         static let BaseURLStaging = ""
-        static let ThumbnailSize = "standard_fantastic"
+        static let ThumbnailStandardSize = "standard_fantastic"
+        static let ThumbnailPortraitSiza = "portrait_uncanny"
         static let ImageNotAvailable = "image_not_available"
         static let InfiniteScrollLimiar = 5
         
@@ -34,6 +35,7 @@ extension MarvelAPI {
         
         struct PathsMethods {
             static let Characters = "/characters"
+            static let HeroArtifacts = "/characters/{id}/{type}"
         }
         
         // MARK: - Parameters Keys

@@ -12,6 +12,7 @@ import Foundation
 public enum MarvelAPI {
     case getCharacters(_ nameStartsWith: String?, _ offset: Int)
     case downloadThumb(_ fromUrl: String)
+    case getHeroArtifacts(_ type: ArtifactType, _ heroID: Int, _ offset: Int)
 }
 
 // MARK: - EndPointType Protocol
@@ -45,6 +46,8 @@ extension MarvelAPI: EndPointType {
         switch self {
         case .getCharacters:
             return Constants.PathsMethods.Characters
+        case .getHeroArtifacts(let type, let heroID, _):
+            return Constants.PathsMethods.HeroArtifacts.replacingOccurrences(of: "{id}", with: "\(heroID)").replacingOccurrences(of: "{type}", with: "\(type.path)")
         default:
             return ""
         }
@@ -52,9 +55,7 @@ extension MarvelAPI: EndPointType {
     
     public var httpMethod: HTTPMethod {
         switch self {
-        case .getCharacters:
-            return .get
-        case .downloadThumb:
+        default:
             return .get
         }
     }
@@ -77,6 +78,8 @@ extension MarvelAPI: EndPointType {
             }
             
             return .requestParameters(bodyParameters: nil, urlParameters: urlParameters)
+        case .getHeroArtifacts:
+            return .requestParameters(bodyParameters: nil, urlParameters: commonUrlParameters)
         case .downloadThumb(let url):
             return .download(url)
         }

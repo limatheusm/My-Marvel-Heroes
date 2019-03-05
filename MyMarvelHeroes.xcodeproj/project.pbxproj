@@ -27,7 +27,6 @@
 		FE4028A32219AE7A0062E355 /* MarvelAPI+Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE4028A22219AE7A0062E355 /* MarvelAPI+Constants.swift */; };
 		FE4028A72219B5340062E355 /* NetworkEnviroment.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE4028A62219B5340062E355 /* NetworkEnviroment.swift */; };
 		FE4028A92219B61B0062E355 /* MarvelAPIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE4028A82219B61B0062E355 /* MarvelAPIManager.swift */; };
-		FE4028AD2219BBA30062E355 /* String+MD5.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE4028AC2219BBA30062E355 /* String+MD5.swift */; };
 		FE4028AF2219D2D70062E355 /* Hero.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE4028AE2219D2D70062E355 /* Hero.swift */; };
 		FE4028B12219D3F80062E355 /* Thumbnail.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE4028B02219D3F80062E355 /* Thumbnail.swift */; };
 		FE4028B32219D5480062E355 /* Comics.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE4028B22219D5480062E355 /* Comics.swift */; };
@@ -44,8 +43,15 @@
 		FE4EEEC2222207E900B0E9CE /* MarvelDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE4EEEC1222207E900B0E9CE /* MarvelDataSource.swift */; };
 		FE4EEEC42222F23B00B0E9CE /* ImageCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE4EEEC32222F23B00B0E9CE /* ImageCache.swift */; };
 		FE4EEEC62224649C00B0E9CE /* HeroesViewController+UISearchBarDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE4EEEC52224649C00B0E9CE /* HeroesViewController+UISearchBarDelegate.swift */; };
-		FE4EEEC92226CEFB00B0E9CE /* UIViewController+Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE4EEEC82226CEFB00B0E9CE /* UIViewController+Alert.swift */; };
 		FE4EEECB2226FD5000B0E9CE /* FooterActivityIndicatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE4EEECA2226FD5000B0E9CE /* FooterActivityIndicatorView.swift */; };
+		FECA46652229670700437C6F /* HeroArtifactsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FECA46642229670700437C6F /* HeroArtifactsViewController.swift */; };
+		FECA46672229679100437C6F /* HeroArtifacts.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FECA46662229679100437C6F /* HeroArtifacts.storyboard */; };
+		FECA46692229689E00437C6F /* ArtifactCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FECA46682229689E00437C6F /* ArtifactCollectionViewCell.swift */; };
+		FECA466B22296BEF00437C6F /* HeroArtifactsViewController+CollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FECA466A22296BEF00437C6F /* HeroArtifactsViewController+CollectionView.swift */; };
+		FEFA44F222298F8400ED9F61 /* Artifact.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEFA44F122298F8400ED9F61 /* Artifact.swift */; };
+		FEFA44F4222C1CAA00ED9F61 /* String+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEFA44F3222C1CAA00ED9F61 /* String+Extensions.swift */; };
+		FEFA44F6222C1E1100ED9F61 /* UIViewController+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEFA44F5222C1E1100ED9F61 /* UIViewController+Extensions.swift */; };
+		FEFA44F9222D6A8100ED9F61 /* Button.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEFA44F8222D6A8100ED9F61 /* Button.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -71,7 +77,6 @@
 		FE4028A22219AE7A0062E355 /* MarvelAPI+Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MarvelAPI+Constants.swift"; sourceTree = "<group>"; };
 		FE4028A62219B5340062E355 /* NetworkEnviroment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkEnviroment.swift; sourceTree = "<group>"; };
 		FE4028A82219B61B0062E355 /* MarvelAPIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarvelAPIManager.swift; sourceTree = "<group>"; };
-		FE4028AC2219BBA30062E355 /* String+MD5.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+MD5.swift"; sourceTree = "<group>"; };
 		FE4028AE2219D2D70062E355 /* Hero.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Hero.swift; sourceTree = "<group>"; };
 		FE4028B02219D3F80062E355 /* Thumbnail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Thumbnail.swift; sourceTree = "<group>"; };
 		FE4028B22219D5480062E355 /* Comics.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Comics.swift; sourceTree = "<group>"; };
@@ -88,8 +93,15 @@
 		FE4EEEC1222207E900B0E9CE /* MarvelDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarvelDataSource.swift; sourceTree = "<group>"; };
 		FE4EEEC32222F23B00B0E9CE /* ImageCache.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCache.swift; sourceTree = "<group>"; };
 		FE4EEEC52224649C00B0E9CE /* HeroesViewController+UISearchBarDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "HeroesViewController+UISearchBarDelegate.swift"; sourceTree = "<group>"; };
-		FE4EEEC82226CEFB00B0E9CE /* UIViewController+Alert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Alert.swift"; sourceTree = "<group>"; };
 		FE4EEECA2226FD5000B0E9CE /* FooterActivityIndicatorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FooterActivityIndicatorView.swift; sourceTree = "<group>"; };
+		FECA46642229670700437C6F /* HeroArtifactsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroArtifactsViewController.swift; sourceTree = "<group>"; };
+		FECA46662229679100437C6F /* HeroArtifacts.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = HeroArtifacts.storyboard; sourceTree = "<group>"; };
+		FECA46682229689E00437C6F /* ArtifactCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtifactCollectionViewCell.swift; sourceTree = "<group>"; };
+		FECA466A22296BEF00437C6F /* HeroArtifactsViewController+CollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "HeroArtifactsViewController+CollectionView.swift"; sourceTree = "<group>"; };
+		FEFA44F122298F8400ED9F61 /* Artifact.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Artifact.swift; sourceTree = "<group>"; };
+		FEFA44F3222C1CAA00ED9F61 /* String+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extensions.swift"; sourceTree = "<group>"; };
+		FEFA44F5222C1E1100ED9F61 /* UIViewController+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extensions.swift"; sourceTree = "<group>"; };
+		FEFA44F8222D6A8100ED9F61 /* Button.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Button.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -155,6 +167,7 @@
 				FE4028B8221A3AC40062E355 /* Events.swift */,
 				FE4EEEC1222207E900B0E9CE /* MarvelDataSource.swift */,
 				FE4EEEC32222F23B00B0E9CE /* ImageCache.swift */,
+				FEFA44F122298F8400ED9F61 /* Artifact.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -162,6 +175,7 @@
 		FE40288322175EE80062E355 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				FECA4663222966D800437C6F /* HeroArtifacts */,
 				FE1FC626222863F900B20921 /* HeroDetails */,
 				FE4EEEBC2221D22A00B0E9CE /* MyHeroes */,
 				FE4EEEBA2221D21C00B0E9CE /* Heroes */,
@@ -175,6 +189,8 @@
 			children = (
 				FE4EEEB02221C1AF00B0E9CE /* HeroCollectionViewCell.swift */,
 				FE4EEECA2226FD5000B0E9CE /* FooterActivityIndicatorView.swift */,
+				FECA46682229689E00437C6F /* ArtifactCollectionViewCell.swift */,
+				FEFA44F8222D6A8100ED9F61 /* Button.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -266,18 +282,10 @@
 		FE4028AA2219BB480062E355 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
-				FE4EEEC72226CEE000B0E9CE /* UIViewController */,
-				FE4028AB2219BB730062E355 /* String */,
+				FEFA44F3222C1CAA00ED9F61 /* String+Extensions.swift */,
+				FEFA44F5222C1E1100ED9F61 /* UIViewController+Extensions.swift */,
 			);
 			path = Extensions;
-			sourceTree = "<group>";
-		};
-		FE4028AB2219BB730062E355 /* String */ = {
-			isa = PBXGroup;
-			children = (
-				FE4028AC2219BBA30062E355 /* String+MD5.swift */,
-			);
-			path = String;
 			sourceTree = "<group>";
 		};
 		FE4EEEB22221C50000B0E9CE /* Storyboards */ = {
@@ -288,6 +296,7 @@
 				FE40287422175DB90062E355 /* Main.storyboard */,
 				FE40287922175DBB0062E355 /* LaunchScreen.storyboard */,
 				FE1FC6292228649400B20921 /* HeroDetails.storyboard */,
+				FECA46662229679100437C6F /* HeroArtifacts.storyboard */,
 			);
 			path = Storyboards;
 			sourceTree = "<group>";
@@ -318,12 +327,13 @@
 			path = MyHeroes;
 			sourceTree = "<group>";
 		};
-		FE4EEEC72226CEE000B0E9CE /* UIViewController */ = {
+		FECA4663222966D800437C6F /* HeroArtifacts */ = {
 			isa = PBXGroup;
 			children = (
-				FE4EEEC82226CEFB00B0E9CE /* UIViewController+Alert.swift */,
+				FECA46642229670700437C6F /* HeroArtifactsViewController.swift */,
+				FECA466A22296BEF00437C6F /* HeroArtifactsViewController+CollectionView.swift */,
 			);
-			path = UIViewController;
+			path = HeroArtifacts;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -389,6 +399,7 @@
 				FE40287B22175DBB0062E355 /* LaunchScreen.storyboard in Resources */,
 				FE40287822175DBB0062E355 /* Assets.xcassets in Resources */,
 				FE4EEEB82221C6D200B0E9CE /* MyHeroes.storyboard in Resources */,
+				FECA46672229679100437C6F /* HeroArtifacts.storyboard in Resources */,
 				FE4EEEB52221C57E00B0E9CE /* Heroes.storyboard in Resources */,
 				FE40287622175DB90062E355 /* Main.storyboard in Resources */,
 				FE1FC62A2228649400B20921 /* HeroDetails.storyboard in Resources */,
@@ -441,9 +452,11 @@
 			files = (
 				FE402897221768A20062E355 /* HTTPHeaders.swift in Sources */,
 				FE4028BF221B06990062E355 /* MyHeroesViewController.swift in Sources */,
-				FE4EEEC92226CEFB00B0E9CE /* UIViewController+Alert.swift in Sources */,
+				FECA46692229689E00437C6F /* ArtifactCollectionViewCell.swift in Sources */,
 				FE4028A32219AE7A0062E355 /* MarvelAPI+Constants.swift in Sources */,
 				FE4EEEC2222207E900B0E9CE /* MarvelDataSource.swift in Sources */,
+				FEFA44F9222D6A8100ED9F61 /* Button.swift in Sources */,
+				FEFA44F6222C1E1100ED9F61 /* UIViewController+Extensions.swift in Sources */,
 				FE40288E221763750062E355 /* JSONParameterEncoder.swift in Sources */,
 				FE40288C221761F60062E355 /* URLParameterEncoder.swift in Sources */,
 				FE4028932217681E0062E355 /* HTTPMethod.swift in Sources */,
@@ -457,8 +470,9 @@
 				FE4028912217674C0062E355 /* EndPointType.swift in Sources */,
 				FE4EEECB2226FD5000B0E9CE /* FooterActivityIndicatorView.swift in Sources */,
 				FE402895221768800062E355 /* HTTPTask.swift in Sources */,
+				FEFA44F222298F8400ED9F61 /* Artifact.swift in Sources */,
 				FE4028A12219AE670062E355 /* MarvelAPI.swift in Sources */,
-				FE4028AD2219BBA30062E355 /* String+MD5.swift in Sources */,
+				FECA466B22296BEF00437C6F /* HeroArtifactsViewController+CollectionView.swift in Sources */,
 				FE4028A72219B5340062E355 /* NetworkEnviroment.swift in Sources */,
 				FE4EEEBE2221D26100B0E9CE /* HeroesViewController+CollectionView.swift in Sources */,
 				FE4028BB221B05C00062E355 /* TabBarViewController.swift in Sources */,
@@ -468,7 +482,9 @@
 				FE1FC6282228642800B20921 /* HeroDetailsViewController.swift in Sources */,
 				FE40288A221760C60062E355 /* ParameterEnconding.swift in Sources */,
 				FE4028A92219B61B0062E355 /* MarvelAPIManager.swift in Sources */,
+				FEFA44F4222C1CAA00ED9F61 /* String+Extensions.swift in Sources */,
 				FE4028B12219D3F80062E355 /* Thumbnail.swift in Sources */,
+				FECA46652229670700437C6F /* HeroArtifactsViewController.swift in Sources */,
 				FE40287122175DB90062E355 /* AppDelegate.swift in Sources */,
 				FE40289B22176C3A0062E355 /* NetworkLogger.swift in Sources */,
 				FE4EEEC42222F23B00B0E9CE /* ImageCache.swift in Sources */,

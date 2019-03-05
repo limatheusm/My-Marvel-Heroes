@@ -14,7 +14,12 @@ struct Thumbnail: Codable {
     
     var url: String? {
         guard path != nil, ext != nil else { return nil }
-        return path! + "/\(MarvelAPI.Constants.ThumbnailSize)." + ext!
+        return path! + "/\(MarvelAPI.Constants.ThumbnailStandardSize)." + ext!
+    }
+    
+    var portraitUrl: String? {
+        guard path != nil, ext != nil else { return nil }
+        return path! + "/\(MarvelAPI.Constants.ThumbnailPortraitSiza)." + ext!
     }
     
     enum CodingKeys: String, CodingKey {
