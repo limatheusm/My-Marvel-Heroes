@@ -54,6 +54,8 @@
 		FEFA44F9222D6A8100ED9F61 /* Button.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEFA44F8222D6A8100ED9F61 /* Button.swift */; };
 		FEFA44FC222ED5AA00ED9F61 /* ArtifactDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEFA44FB222ED5AA00ED9F61 /* ArtifactDetailsViewController.swift */; };
 		FEFA44FE222ED5D000ED9F61 /* ArtifactDetails.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FEFA44FD222ED5D000ED9F61 /* ArtifactDetails.storyboard */; };
+		FEFA45002231C9FB00ED9F61 /* CoreDataStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEFA44FF2231C9FB00ED9F61 /* CoreDataStack.swift */; };
+		FEFA45032231D05600ED9F61 /* Marvel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = FEFA45012231D05600ED9F61 /* Marvel.xcdatamodeld */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -106,6 +108,8 @@
 		FEFA44F8222D6A8100ED9F61 /* Button.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Button.swift; sourceTree = "<group>"; };
 		FEFA44FB222ED5AA00ED9F61 /* ArtifactDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtifactDetailsViewController.swift; sourceTree = "<group>"; };
 		FEFA44FD222ED5D000ED9F61 /* ArtifactDetails.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ArtifactDetails.storyboard; sourceTree = "<group>"; };
+		FEFA44FF2231C9FB00ED9F61 /* CoreDataStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataStack.swift; sourceTree = "<group>"; };
+		FEFA45022231D05600ED9F61 /* Marvel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Marvel.xcdatamodel; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -203,6 +207,8 @@
 		FE40288522175F020062E355 /* CoreData */ = {
 			isa = PBXGroup;
 			children = (
+				FEFA44FF2231C9FB00ED9F61 /* CoreDataStack.swift */,
+				FEFA45012231D05600ED9F61 /* Marvel.xcdatamodeld */,
 			);
 			path = CoreData;
 			sourceTree = "<group>";
@@ -466,6 +472,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FE402897221768A20062E355 /* HTTPHeaders.swift in Sources */,
+				FEFA45032231D05600ED9F61 /* Marvel.xcdatamodeld in Sources */,
 				FE4028BF221B06990062E355 /* MyHeroesViewController.swift in Sources */,
 				FECA46692229689E00437C6F /* ArtifactCollectionViewCell.swift in Sources */,
 				FE4028A32219AE7A0062E355 /* MarvelAPI+Constants.swift in Sources */,
@@ -480,6 +487,7 @@
 				FE4028B9221A3AC40062E355 /* Events.swift in Sources */,
 				FE4028B52219D5FB0062E355 /* Stories.swift in Sources */,
 				FE40289D22176CC50062E355 /* Router.swift in Sources */,
+				FEFA45002231C9FB00ED9F61 /* CoreDataStack.swift in Sources */,
 				FE4EEEB12221C1AF00B0E9CE /* HeroCollectionViewCell.swift in Sources */,
 				FE4028B7221A3AA20062E355 /* Series.swift in Sources */,
 				FE4EEEC62224649C00B0E9CE /* HeroesViewController+UISearchBarDelegate.swift in Sources */,
@@ -719,6 +727,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		FEFA45012231D05600ED9F61 /* Marvel.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				FEFA45022231D05600ED9F61 /* Marvel.xcdatamodel */,
+			);
+			currentVersion = FEFA45022231D05600ED9F61 /* Marvel.xcdatamodel */;
+			path = Marvel.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = FE40286522175DB90062E355 /* Project object */;
 }
