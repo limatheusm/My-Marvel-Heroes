@@ -21,6 +21,12 @@ class ArtifactCollectionViewCell: UICollectionViewCell {
     
     static let identifier = "ArtifactCollectionViewCellID"
     
+    override var isHighlighted: Bool {
+        didSet {
+            self.layer.opacity = isHighlighted ? 0.5 : 1
+        }
+    }
+    
     override func prepareForReuse() {
         imageView.image = nil
         super.prepareForReuse()

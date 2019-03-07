@@ -99,9 +99,8 @@
                                     <outlet property="delegate" destination="3qg-Fm-w9a" id="5yI-7S-uFe"/>
                                 </connections>
                             </collectionView>
-                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" hidesWhenStopped="YES" animating="YES" style="white" translatesAutoresizingMaskIntoConstraints="NO" id="2LH-8l-8Or">
-                                <rect key="frame" x="177" y="323" width="20" height="20"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" animating="YES" style="white" translatesAutoresizingMaskIntoConstraints="NO" id="2LH-8l-8Or">
+                                <rect key="frame" x="177.5" y="323.5" width="20" height="20"/>
                             </activityIndicatorView>
                         </subviews>
                         <color key="backgroundColor" name="primary"/>
@@ -109,6 +108,8 @@
                             <constraint firstItem="VJl-bl-U0O" firstAttribute="top" secondItem="4g4-l7-jbV" secondAttribute="top" id="1IJ-Hn-N4D"/>
                             <constraint firstItem="4g4-l7-jbV" firstAttribute="trailing" secondItem="VJl-bl-U0O" secondAttribute="trailing" id="EFm-PT-Vmk"/>
                             <constraint firstItem="VJl-bl-U0O" firstAttribute="leading" secondItem="4g4-l7-jbV" secondAttribute="leading" id="F9e-ts-SYj"/>
+                            <constraint firstItem="2LH-8l-8Or" firstAttribute="centerX" secondItem="Ic2-Zp-qhf" secondAttribute="centerX" id="JOH-Eq-1ZG"/>
+                            <constraint firstItem="2LH-8l-8Or" firstAttribute="centerY" secondItem="Ic2-Zp-qhf" secondAttribute="centerY" id="OXb-pT-zCa"/>
                             <constraint firstItem="4g4-l7-jbV" firstAttribute="bottom" secondItem="VJl-bl-U0O" secondAttribute="bottom" id="ijt-Hy-qik"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="4g4-l7-jbV"/>

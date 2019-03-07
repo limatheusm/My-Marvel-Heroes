@@ -75,6 +75,15 @@ class HeroArtifactsViewController: UIViewController {
         }
     }
     
+    // MARK: - Navigation
+    
+    func navToArtifactDetails(with artifact: Artifact, artifactImage: UIImage?) {
+        let controller = ArtifactDetailsViewController.instanceFromStoryboard()
+        controller.artifact = artifact
+        controller.artifactImage = artifactImage
+        navigationController?.pushViewController(controller, animated: true)
+    }
+    
 }
 
 // MARK: - Helpers

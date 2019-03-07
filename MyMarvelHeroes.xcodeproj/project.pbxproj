@@ -52,6 +52,8 @@
 		FEFA44F4222C1CAA00ED9F61 /* String+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEFA44F3222C1CAA00ED9F61 /* String+Extensions.swift */; };
 		FEFA44F6222C1E1100ED9F61 /* UIViewController+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEFA44F5222C1E1100ED9F61 /* UIViewController+Extensions.swift */; };
 		FEFA44F9222D6A8100ED9F61 /* Button.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEFA44F8222D6A8100ED9F61 /* Button.swift */; };
+		FEFA44FC222ED5AA00ED9F61 /* ArtifactDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEFA44FB222ED5AA00ED9F61 /* ArtifactDetailsViewController.swift */; };
+		FEFA44FE222ED5D000ED9F61 /* ArtifactDetails.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FEFA44FD222ED5D000ED9F61 /* ArtifactDetails.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -102,6 +104,8 @@
 		FEFA44F3222C1CAA00ED9F61 /* String+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extensions.swift"; sourceTree = "<group>"; };
 		FEFA44F5222C1E1100ED9F61 /* UIViewController+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extensions.swift"; sourceTree = "<group>"; };
 		FEFA44F8222D6A8100ED9F61 /* Button.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Button.swift; sourceTree = "<group>"; };
+		FEFA44FB222ED5AA00ED9F61 /* ArtifactDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtifactDetailsViewController.swift; sourceTree = "<group>"; };
+		FEFA44FD222ED5D000ED9F61 /* ArtifactDetails.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ArtifactDetails.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -175,6 +179,7 @@
 		FE40288322175EE80062E355 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				FEFA44FA222ED59000ED9F61 /* ArtifactDetails */,
 				FECA4663222966D800437C6F /* HeroArtifacts */,
 				FE1FC626222863F900B20921 /* HeroDetails */,
 				FE4EEEBC2221D22A00B0E9CE /* MyHeroes */,
@@ -297,6 +302,7 @@
 				FE40287922175DBB0062E355 /* LaunchScreen.storyboard */,
 				FE1FC6292228649400B20921 /* HeroDetails.storyboard */,
 				FECA46662229679100437C6F /* HeroArtifacts.storyboard */,
+				FEFA44FD222ED5D000ED9F61 /* ArtifactDetails.storyboard */,
 			);
 			path = Storyboards;
 			sourceTree = "<group>";
@@ -334,6 +340,14 @@
 				FECA466A22296BEF00437C6F /* HeroArtifactsViewController+CollectionView.swift */,
 			);
 			path = HeroArtifacts;
+			sourceTree = "<group>";
+		};
+		FEFA44FA222ED59000ED9F61 /* ArtifactDetails */ = {
+			isa = PBXGroup;
+			children = (
+				FEFA44FB222ED5AA00ED9F61 /* ArtifactDetailsViewController.swift */,
+			);
+			path = ArtifactDetails;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -401,6 +415,7 @@
 				FE4EEEB82221C6D200B0E9CE /* MyHeroes.storyboard in Resources */,
 				FECA46672229679100437C6F /* HeroArtifacts.storyboard in Resources */,
 				FE4EEEB52221C57E00B0E9CE /* Heroes.storyboard in Resources */,
+				FEFA44FE222ED5D000ED9F61 /* ArtifactDetails.storyboard in Resources */,
 				FE40287622175DB90062E355 /* Main.storyboard in Resources */,
 				FE1FC62A2228649400B20921 /* HeroDetails.storyboard in Resources */,
 			);
@@ -454,6 +469,7 @@
 				FE4028BF221B06990062E355 /* MyHeroesViewController.swift in Sources */,
 				FECA46692229689E00437C6F /* ArtifactCollectionViewCell.swift in Sources */,
 				FE4028A32219AE7A0062E355 /* MarvelAPI+Constants.swift in Sources */,
+				FEFA44FC222ED5AA00ED9F61 /* ArtifactDetailsViewController.swift in Sources */,
 				FE4EEEC2222207E900B0E9CE /* MarvelDataSource.swift in Sources */,
 				FEFA44F9222D6A8100ED9F61 /* Button.swift in Sources */,
 				FEFA44F6222C1E1100ED9F61 /* UIViewController+Extensions.swift in Sources */,

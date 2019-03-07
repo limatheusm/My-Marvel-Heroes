@@ -38,6 +38,12 @@ extension HeroArtifactsViewController: UICollectionViewDataSource {
             loadArtifacts(withIndicator: false)
         }
     }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let artifact = artifacts[indexPath.row]
+        let artifactCell = collectionView.cellForItem(at: indexPath) as! ArtifactCollectionViewCell
+        navToArtifactDetails(with: artifact, artifactImage: artifactCell.imageView.image)
+    }
 }
 
 extension HeroArtifactsViewController: UICollectionViewDelegateFlowLayout {

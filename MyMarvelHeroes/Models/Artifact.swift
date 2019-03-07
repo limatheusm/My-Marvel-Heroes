@@ -47,4 +47,10 @@ struct Artifact: Codable {
     let pageCount: Int?
     let urls: [URLElement]?
     let thumbnail: Thumbnail?
+    let dates: [DateElement]?
+}
+
+struct DateElement: Codable {
+    let type: String?
+    let date: String?
 }

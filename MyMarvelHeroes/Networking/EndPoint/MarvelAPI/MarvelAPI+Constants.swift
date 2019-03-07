@@ -25,6 +25,7 @@ extension MarvelAPI {
         static let ThumbnailPortraitSiza = "portrait_uncanny"
         static let ImageNotAvailable = "image_not_available"
         static let InfiniteScrollLimiar = 5
+        static let DateFormat = "yyyy-MM-dd'T'HH:mm:ss-SSSS"
         
         // MARK: - Request constants
         
