@@ -7,9 +7,12 @@
 //
 
 import UIKit
+import CoreData
 
 class HeroesViewController: UIViewController {
+    
     // MARK: - Outlets
+    
     @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
     @IBOutlet weak var collectionView: UICollectionView!
     
@@ -61,7 +64,7 @@ class HeroesViewController: UIViewController {
         navigationItem.searchController = searchController
     }
     
-    // MARK: - load functions
+    // MARK: - Network functions
     
     func loadHeroes(reset: Bool = false, withIndicator: Bool = false) {
         setLoading(true, withIndicator: withIndicator)
@@ -116,6 +119,53 @@ class HeroesViewController: UIViewController {
         }
     }
     
+    // MARK: - Core Data Functions
+    
+    func getMyHero(with id: Int, completion: @escaping (_ myHero: MyHero?) -> Void) {
+        let myHeroFetchRequest: NSFetchRequest<MyHero> = MyHero.fetchRequest()
+        myHeroFetchRequest.predicate = NSPredicate(format: "id == %d", Int32(id))
+        myHeroFetchRequest.fetchLimit = 1
+        do {
+            let result = try CoreDataStack.sharedInstance.viewContext.fetch(myHeroFetchRequest)
+            completion(result.first)
+        } catch {
+            print("\(#function) Failed")
+            completion(nil)
+        }
+    }
+    
+    func save(hero: Hero, heroImage: UIImageView?, completion: @escaping (_ myHero: MyHero?, _ error: Error?) -> Void) {
+        CoreDataStack.sharedInstance.performViewTask { viewContext in
+            let myHero = MyHero(context: viewContext)
+            
+            myHero.id = Int32(hero.id!)
+            myHero.about = hero.description
+            myHero.name = hero.name
+            myHero.image = heroImage?.image?.pngData()
+            myHero.comicsCount = Int32(hero.comics?.available ?? 0)
+            myHero.seriesCount = Int32(hero.series?.available ?? 0)
+            myHero.storiesCount = Int32(hero.stories?.available ?? 0)
+            do {
+                try viewContext.save()
+                completion(myHero, nil)
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+    
+    func delete(myHero: MyHero, completion: @escaping (_ error: Error?) -> Void) {
+        CoreDataStack.sharedInstance.performViewTask { (viewContext) in
+            viewContext.delete(myHero)
+            do {
+                try viewContext.save()
+                completion(nil)
+            } catch {
+                completion(error)
+            }
+        }
+    }
+    
     // MARK: - Navigation
 
     func navToHeroDetails(with hero: Hero, heroImage: UIImage?) {
@@ -124,15 +174,6 @@ class HeroesViewController: UIViewController {
         controller.heroImage = heroImage
         navigationController?.pushViewController(controller, animated: true)
     }
-    
-    /*
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }
 

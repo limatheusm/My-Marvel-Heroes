@@ -44,20 +44,21 @@ final class CoreDataStack {
             guard error == nil else { fatalError(error!.localizedDescription) }
             
             self.configureContexts()
-            self.autoSaveViewContext()
+            self.autoSaveContext()
             completion?()
         }
     }
     
     // MARK: - Core Data Saving Support
     
-    func autoSaveViewContext(interval: TimeInterval = 30) {
+    func autoSaveContext(interval: TimeInterval = 30) {
         guard interval > 0 else { print("interval must be positive"); return }
         
         if viewContext.hasChanges { try? viewContext.save() }
+        if backgroundContext.hasChanges { try? backgroundContext.save() }
         
         DispatchQueue.main.asyncAfter(deadline: .now() + interval) {
-            self.autoSaveViewContext(interval: interval)
+            self.autoSaveContext(interval: interval)
         }
     }
     
@@ -104,7 +105,9 @@ final class CoreDataStack {
     
     func performViewTask(_ block: @escaping (NSManagedObjectContext) -> Void) {
         viewContext.perform {
-            block(self.viewContext)
+            DispatchQueue.main.async {
+                block(self.viewContext)
+            }
         }
     }
     

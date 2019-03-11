@@ -71,6 +71,34 @@
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Q7G-Zl-Gu6">
                                                     <rect key="frame" x="0.0" y="0.0" width="144" height="145"/>
                                                 </imageView>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="u4J-1J-Y9G">
+                                                    <rect key="frame" x="106" y="8" width="30" height="30"/>
+                                                    <subviews>
+                                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="woi-Um-L8a">
+                                                            <rect key="frame" x="5" y="5" width="20" height="20"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="width" constant="20" id="Tuf-OE-H0d"/>
+                                                                <constraint firstAttribute="height" constant="20" id="gGz-Cj-BNs"/>
+                                                            </constraints>
+                                                            <state key="normal" image="like"/>
+                                                            <connections>
+                                                                <action selector="favAction:" destination="5SN-Vg-UDL" eventType="touchUpInside" id="K5q-jh-q4K"/>
+                                                            </connections>
+                                                        </button>
+                                                    </subviews>
+                                                    <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.5" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <constraints>
+                                                        <constraint firstItem="woi-Um-L8a" firstAttribute="centerY" secondItem="u4J-1J-Y9G" secondAttribute="centerY" id="dN3-h0-1EL"/>
+                                                        <constraint firstAttribute="width" constant="30" id="izw-eO-oI5"/>
+                                                        <constraint firstItem="woi-Um-L8a" firstAttribute="centerX" secondItem="u4J-1J-Y9G" secondAttribute="centerX" id="ncd-X9-lkn"/>
+                                                        <constraint firstAttribute="height" constant="30" id="sJl-HW-Tb6"/>
+                                                    </constraints>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                            <integer key="value" value="5"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                    </userDefinedRuntimeAttributes>
+                                                </view>
                                                 <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="white" translatesAutoresizingMaskIntoConstraints="NO" id="fP7-Dt-GgM">
                                                     <rect key="frame" x="62" y="62.5" width="20" height="20"/>
                                                     <color key="color" name="secondary"/>
@@ -105,11 +133,14 @@
                                             <constraint firstItem="BFB-t2-7LO" firstAttribute="leading" secondItem="5SN-Vg-UDL" secondAttribute="leading" id="Bro-mV-sBi"/>
                                             <constraint firstAttribute="bottom" secondItem="Q7G-Zl-Gu6" secondAttribute="bottom" id="GkV-k6-IV2"/>
                                             <constraint firstAttribute="trailing" secondItem="Q7G-Zl-Gu6" secondAttribute="trailing" id="SfK-yj-s9e"/>
+                                            <constraint firstItem="u4J-1J-Y9G" firstAttribute="top" secondItem="5SN-Vg-UDL" secondAttribute="top" constant="8" id="Uh5-QE-wSX"/>
+                                            <constraint firstAttribute="trailing" secondItem="u4J-1J-Y9G" secondAttribute="trailing" constant="8" id="erF-le-dZP"/>
                                             <constraint firstItem="fP7-Dt-GgM" firstAttribute="centerX" secondItem="5SN-Vg-UDL" secondAttribute="centerX" id="h1E-Nb-Do4"/>
                                             <constraint firstAttribute="trailing" secondItem="BFB-t2-7LO" secondAttribute="trailing" id="uPc-3f-azS"/>
                                         </constraints>
                                         <connections>
                                             <outlet property="activityIndicator" destination="fP7-Dt-GgM" id="ldt-Bu-n9p"/>
+                                            <outlet property="favButton" destination="woi-Um-L8a" id="DHn-CY-whr"/>
                                             <outlet property="nameLabel" destination="PPJ-5d-6I0" id="UP0-ZN-hNM"/>
                                             <outlet property="thumbImageView" destination="Q7G-Zl-Gu6" id="cwY-b2-2Aj"/>
                                         </connections>
@@ -165,6 +196,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="like" width="48" height="48"/>
         <image name="marvelTabIcon" width="32" height="32"/>
         <namedColor name="primary">
             <color red="0.1289999932050705" green="0.1289999932050705" blue="0.1289999932050705" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

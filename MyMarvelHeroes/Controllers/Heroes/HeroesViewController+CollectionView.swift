@@ -9,6 +9,36 @@
 import Foundation
 import UIKit
 
+extension HeroesViewController: HeroCellDelegate {
+    func didTapFavorite(_ heroViewCell: HeroCollectionViewCell, hero: Hero?, myHero: MyHero?) {
+        guard let hero = hero else { return }
+        
+        heroViewCell.favButton.isEnabled = false
+        
+        if let myHero = myHero {
+            /* Unfavorite hero */
+            delete(myHero: myHero) { error in
+                DispatchQueue.main.async {
+                    if error == nil {
+                        heroViewCell.myHero = nil
+                    }
+                    heroViewCell.favButton.isEnabled = true
+                }
+            }
+        } else {
+            /* Favorite hero */
+            save(hero: hero, heroImage: heroViewCell.thumbImageView) { (myHero, error) in
+                DispatchQueue.main.async {
+                    if error == nil {
+                        heroViewCell.myHero = myHero
+                    }
+                    heroViewCell.favButton.isEnabled = true
+                }
+            }
+        }
+    }
+}
+
 extension HeroesViewController: UICollectionViewDataSource {
     
     func scrollViewWillBeginDragging(_ scrollView: UIScrollView) {
@@ -22,7 +52,17 @@ extension HeroesViewController: UICollectionViewDataSource {
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: HeroCollectionViewCell.identifier, for: indexPath) as! HeroCollectionViewCell
-        cell.prepareCell(with: heroes[indexPath.row])
+        
+        let hero = heroes[indexPath.row]
+        guard let heroID = hero.id else {
+            return cell
+        }
+        
+        getMyHero(with: heroID) { (myHero) in
+            cell.prepareCell(with: hero, myHero: myHero)
+            cell.delegate = self
+        }
+        
         return cell
     }
     
