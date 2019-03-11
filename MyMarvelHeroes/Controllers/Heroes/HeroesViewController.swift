@@ -47,6 +47,11 @@ class HeroesViewController: UIViewController {
         setUpSearchController()
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        collectionView.reloadData()
+    }
+    
     // MARK: - Set Up Functions
     
     fileprivate func setUpSearchController() {
@@ -170,8 +175,8 @@ class HeroesViewController: UIViewController {
 
     func navToHeroDetails(with hero: Hero, heroImage: UIImage?) {
         let controller = HeroDetailsViewController.instanceFromStoryboard()
-        controller.hero = hero
         controller.heroImage = heroImage
+        controller.setHero(with: hero)
         navigationController?.pushViewController(controller, animated: true)
     }
 

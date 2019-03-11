@@ -56,6 +56,9 @@
 		FEFA44FE222ED5D000ED9F61 /* ArtifactDetails.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FEFA44FD222ED5D000ED9F61 /* ArtifactDetails.storyboard */; };
 		FEFA45002231C9FB00ED9F61 /* CoreDataStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEFA44FF2231C9FB00ED9F61 /* CoreDataStack.swift */; };
 		FEFA45032231D05600ED9F61 /* Marvel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = FEFA45012231D05600ED9F61 /* Marvel.xcdatamodeld */; };
+		FEFA45052236B58D00ED9F61 /* MyHeroesViewController+NSFetchedResultsControllerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEFA45042236B58D00ED9F61 /* MyHeroesViewController+NSFetchedResultsControllerDelegate.swift */; };
+		FEFA45072236B78200ED9F61 /* MyHeroesViewController+UITableViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEFA45062236B78200ED9F61 /* MyHeroesViewController+UITableViewDelegate.swift */; };
+		FEFA45092236BF8100ED9F61 /* MyHeroTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEFA45082236BF8100ED9F61 /* MyHeroTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -110,6 +113,9 @@
 		FEFA44FD222ED5D000ED9F61 /* ArtifactDetails.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ArtifactDetails.storyboard; sourceTree = "<group>"; };
 		FEFA44FF2231C9FB00ED9F61 /* CoreDataStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataStack.swift; sourceTree = "<group>"; };
 		FEFA45022231D05600ED9F61 /* Marvel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Marvel.xcdatamodel; sourceTree = "<group>"; };
+		FEFA45042236B58D00ED9F61 /* MyHeroesViewController+NSFetchedResultsControllerDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MyHeroesViewController+NSFetchedResultsControllerDelegate.swift"; sourceTree = "<group>"; };
+		FEFA45062236B78200ED9F61 /* MyHeroesViewController+UITableViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MyHeroesViewController+UITableViewDelegate.swift"; sourceTree = "<group>"; };
+		FEFA45082236BF8100ED9F61 /* MyHeroTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyHeroTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -200,6 +206,7 @@
 				FE4EEECA2226FD5000B0E9CE /* FooterActivityIndicatorView.swift */,
 				FECA46682229689E00437C6F /* ArtifactCollectionViewCell.swift */,
 				FEFA44F8222D6A8100ED9F61 /* Button.swift */,
+				FEFA45082236BF8100ED9F61 /* MyHeroTableViewCell.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -335,6 +342,8 @@
 			isa = PBXGroup;
 			children = (
 				FE4028BE221B06990062E355 /* MyHeroesViewController.swift */,
+				FEFA45042236B58D00ED9F61 /* MyHeroesViewController+NSFetchedResultsControllerDelegate.swift */,
+				FEFA45062236B78200ED9F61 /* MyHeroesViewController+UITableViewDelegate.swift */,
 			);
 			path = MyHeroes;
 			sourceTree = "<group>";
@@ -487,6 +496,7 @@
 				FE4028B9221A3AC40062E355 /* Events.swift in Sources */,
 				FE4028B52219D5FB0062E355 /* Stories.swift in Sources */,
 				FE40289D22176CC50062E355 /* Router.swift in Sources */,
+				FEFA45072236B78200ED9F61 /* MyHeroesViewController+UITableViewDelegate.swift in Sources */,
 				FEFA45002231C9FB00ED9F61 /* CoreDataStack.swift in Sources */,
 				FE4EEEB12221C1AF00B0E9CE /* HeroCollectionViewCell.swift in Sources */,
 				FE4028B7221A3AA20062E355 /* Series.swift in Sources */,
@@ -502,6 +512,7 @@
 				FE4028BB221B05C00062E355 /* TabBarViewController.swift in Sources */,
 				FE4028AF2219D2D70062E355 /* Hero.swift in Sources */,
 				FE40289922176B6A0062E355 /* NetworkRouter.swift in Sources */,
+				FEFA45052236B58D00ED9F61 /* MyHeroesViewController+NSFetchedResultsControllerDelegate.swift in Sources */,
 				FE4028BD221B05FD0062E355 /* HeroesViewController.swift in Sources */,
 				FE1FC6282228642800B20921 /* HeroDetailsViewController.swift in Sources */,
 				FE40288A221760C60062E355 /* ParameterEnconding.swift in Sources */,
@@ -512,6 +523,7 @@
 				FE40287122175DB90062E355 /* AppDelegate.swift in Sources */,
 				FE40289B22176C3A0062E355 /* NetworkLogger.swift in Sources */,
 				FE4EEEC42222F23B00B0E9CE /* ImageCache.swift in Sources */,
+				FEFA45092236BF8100ED9F61 /* MyHeroTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

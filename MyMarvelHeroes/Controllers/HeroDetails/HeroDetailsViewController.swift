@@ -19,8 +19,13 @@ class HeroDetailsViewController: UIViewController {
     
     // MARK: - Properties
     
-    var hero: Hero?
     var heroImage: UIImage?
+    var heroID: Int?
+    var heroName: String?
+    var heroDescription: String?
+    var heroComicsCount: Int?
+    var heroSeriesCount: Int?
+    var heroStoriesCount: Int?
     
     // MARK: - View Lifecycle
     
@@ -38,29 +43,47 @@ class HeroDetailsViewController: UIViewController {
     
     // MARK: - SetUp Functions
     
+    func setHero(with hero: Hero) {
+        heroID = hero.id
+        heroName = hero.name
+        heroDescription = hero.description
+        heroComicsCount = hero.comics?.available
+        heroSeriesCount = hero.series?.available
+        heroStoriesCount = hero.stories?.available
+    }
+    
+    func setHero(with myHero: MyHero) {
+        if let imageData = myHero.image {
+            heroImage = UIImage(data: imageData)
+        }
+        heroID = Int(myHero.id)
+        heroName = myHero.name
+        heroDescription = myHero.about
+        heroComicsCount = Int(myHero.comicsCount)
+        heroSeriesCount = Int(myHero.seriesCount)
+        heroStoriesCount = Int(myHero.storiesCount)
+    }
+    
     fileprivate func setUpHero() {
-        title = hero?.name
+        title = heroName
         heroImageView.image = heroImage
-        if let description = hero?.description, !description.isEmpty {
+        if let description = heroDescription, !description.isEmpty {
             descriptionLabel.text = description
         } else {
             descriptionLabel.text = "Description not available"
         }
         
         /* Comics button */
-        guard let comics = hero?.comics else { return }
-        comicsButton.isEnabled = comics.available ?? 0 > 0
-        comicsButton.titleText = "\(comics.available ?? 0) COMICS"
+        comicsButton.isEnabled = heroComicsCount ?? 0 > 0
+        comicsButton.titleText = "\(heroComicsCount ?? 0) COMICS"
 
         /* Series button */
-        guard let series = hero?.series else { return }
-        seriesButton.isEnabled = series.available ?? 0 > 0
-        seriesButton.titleText = "\(series.available ?? 0) SERIES"
+        seriesButton.isEnabled = heroSeriesCount ?? 0 > 0
+        seriesButton.titleText = "\(heroSeriesCount ?? 0) SERIES"
 
         /* Stories button */
-        guard let stories = hero?.stories else { return }
-        storiesButton.isEnabled = stories.available ?? 0 > 0
-        storiesButton.titleText = "\(stories.available ?? 0) STORIES"
+        storiesButton.isEnabled = heroStoriesCount ?? 0 > 0
+        storiesButton.titleText = "\(heroStoriesCount ?? 0) STORIES"
         
     }
     
@@ -68,21 +91,21 @@ class HeroDetailsViewController: UIViewController {
     
     @IBAction func showComics(_ sender: UIButton) {
         let controller = HeroArtifactsViewController.instanceFromStoryboard()
-        controller.heroID = hero?.id
+        controller.heroID = heroID
         controller.artifactType = ArtifactType.comic
         navigationController?.pushViewController(controller, animated: true)
     }
     
     @IBAction func showSeries(_ sender: UIButton) {
         let controller = HeroArtifactsViewController.instanceFromStoryboard()
-        controller.heroID = hero?.id
+        controller.heroID = heroID
         controller.artifactType = ArtifactType.serie
         navigationController?.pushViewController(controller, animated: true)
     }
     
     @IBAction func showStories(_ sender: UIButton) {
         let controller = HeroArtifactsViewController.instanceFromStoryboard()
-        controller.heroID = hero?.id
+        controller.heroID = heroID
         controller.artifactType = ArtifactType.storie
         navigationController?.pushViewController(controller, animated: true)
     }

@@ -45,14 +45,89 @@
                     <view key="view" contentMode="scaleToFill" id="VpY-K4-mJP">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="OxX-xm-STq">
+                                <rect key="frame" x="0.0" y="116" width="375" height="551"/>
+                                <color key="backgroundColor" name="primary"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="myHeroCell" rowHeight="100" id="68t-P6-36u" customClass="MyHeroTableViewCell" customModule="MyMarvelHeroes" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="100"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="68t-P6-36u" id="Xk4-O8-RN2">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="100"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="V1s-Ff-OgS">
+                                                    <rect key="frame" x="0.0" y="0.0" width="375" height="100"/>
+                                                </imageView>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rAE-uQ-z3S">
+                                                    <rect key="frame" x="0.0" y="0.0" width="375" height="100"/>
+                                                    <subviews>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yzO-pP-7nD">
+                                                            <rect key="frame" x="16" y="33" width="343" height="34.5"/>
+                                                            <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="25"/>
+                                                            <color key="textColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                    </subviews>
+                                                    <color key="backgroundColor" white="0.0" alpha="0.64645761986301364" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <constraints>
+                                                        <constraint firstItem="yzO-pP-7nD" firstAttribute="leading" secondItem="rAE-uQ-z3S" secondAttribute="leading" constant="16" id="Bvg-d2-AqI"/>
+                                                        <constraint firstItem="yzO-pP-7nD" firstAttribute="centerX" secondItem="rAE-uQ-z3S" secondAttribute="centerX" id="mk1-OE-X7T"/>
+                                                        <constraint firstAttribute="trailing" secondItem="yzO-pP-7nD" secondAttribute="trailing" constant="16" id="s7l-gJ-vas"/>
+                                                        <constraint firstItem="yzO-pP-7nD" firstAttribute="centerY" secondItem="rAE-uQ-z3S" secondAttribute="centerY" id="tCf-9J-k6w"/>
+                                                    </constraints>
+                                                </view>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="bottom" secondItem="rAE-uQ-z3S" secondAttribute="bottom" id="2LU-SM-ow6"/>
+                                                <constraint firstItem="rAE-uQ-z3S" firstAttribute="leading" secondItem="Xk4-O8-RN2" secondAttribute="leading" id="5C4-v1-vCz"/>
+                                                <constraint firstAttribute="bottom" secondItem="V1s-Ff-OgS" secondAttribute="bottom" id="JCu-sX-3RI"/>
+                                                <constraint firstAttribute="trailing" secondItem="V1s-Ff-OgS" secondAttribute="trailing" id="Myh-hh-hFh"/>
+                                                <constraint firstItem="V1s-Ff-OgS" firstAttribute="top" secondItem="Xk4-O8-RN2" secondAttribute="top" id="O2b-2L-7X1"/>
+                                                <constraint firstItem="V1s-Ff-OgS" firstAttribute="leading" secondItem="Xk4-O8-RN2" secondAttribute="leading" id="PI8-9Q-jxx"/>
+                                                <constraint firstItem="rAE-uQ-z3S" firstAttribute="top" secondItem="Xk4-O8-RN2" secondAttribute="top" id="QEr-an-2YM"/>
+                                                <constraint firstAttribute="trailing" secondItem="rAE-uQ-z3S" secondAttribute="trailing" id="ggs-gX-qhw"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="heroImageView" destination="V1s-Ff-OgS" id="VTv-H2-TJy"/>
+                                            <outlet property="nameLabel" destination="yzO-pP-7nD" id="9jc-LQ-n2L"/>
+                                            <segue destination="IZN-eW-JF7" kind="show" identifier="heroDetailsSegue" id="KPI-r7-PtH"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="btY-XS-V9R" id="UWu-5b-8jU"/>
+                                    <outlet property="delegate" destination="btY-XS-V9R" id="YgI-br-9It"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
                         <color key="backgroundColor" name="primary"/>
+                        <constraints>
+                            <constraint firstItem="tJC-gR-OsQ" firstAttribute="trailing" secondItem="OxX-xm-STq" secondAttribute="trailing" id="KJC-bq-w24"/>
+                            <constraint firstItem="OxX-xm-STq" firstAttribute="top" secondItem="tJC-gR-OsQ" secondAttribute="top" id="eEB-bc-Twr"/>
+                            <constraint firstItem="tJC-gR-OsQ" firstAttribute="bottom" secondItem="OxX-xm-STq" secondAttribute="bottom" id="mTi-sD-CXX"/>
+                            <constraint firstItem="OxX-xm-STq" firstAttribute="leading" secondItem="tJC-gR-OsQ" secondAttribute="leading" id="o1V-Pf-SM6"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="tJC-gR-OsQ"/>
                     </view>
                     <navigationItem key="navigationItem" title="My Marvel Heroes" largeTitleDisplayMode="always" id="6ea-yj-vzR"/>
+                    <connections>
+                        <outlet property="tableView" destination="OxX-xm-STq" id="71v-hG-T7q"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KnM-Hy-iyr" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2764" y="465.51724137931041"/>
+        </scene>
+        <!--HeroDetails-->
+        <scene sceneID="64I-KJ-yKl">
+            <objects>
+                <viewControllerPlaceholder storyboardName="HeroDetails" id="IZN-eW-JF7" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="t34-K4-4dh" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3443" y="465"/>
         </scene>
     </scenes>
     <resources>
@@ -67,4 +142,5 @@
             <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
     </resources>
+    <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
 </document>
