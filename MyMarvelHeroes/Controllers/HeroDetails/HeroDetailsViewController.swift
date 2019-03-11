@@ -11,6 +11,7 @@ import UIKit
 class HeroDetailsViewController: UIViewController {
 
     // MARK: - Outlets
+    @IBOutlet weak var heroNameLabel: UILabel!
     @IBOutlet weak var heroImageView: UIImageView!
     @IBOutlet weak var descriptionLabel: UILabel!
     @IBOutlet weak var comicsButton: Button!
@@ -46,6 +47,7 @@ class HeroDetailsViewController: UIViewController {
     func setHero(with hero: Hero) {
         heroID = hero.id
         heroName = hero.name
+//        heroNameLabel.text = hero.name
         heroDescription = hero.description
         heroComicsCount = hero.comics?.available
         heroSeriesCount = hero.series?.available
@@ -66,6 +68,7 @@ class HeroDetailsViewController: UIViewController {
     
     fileprivate func setUpHero() {
         title = heroName
+        heroNameLabel.text = heroName
         heroImageView.image = heroImage
         if let description = heroDescription, !description.isEmpty {
             descriptionLabel.text = description
