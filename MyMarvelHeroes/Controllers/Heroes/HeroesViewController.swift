@@ -13,6 +13,7 @@ class HeroesViewController: UIViewController {
     
     // MARK: - Outlets
     
+    @IBOutlet weak var darkView: UIView!
     @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
     @IBOutlet weak var collectionView: UICollectionView!
     

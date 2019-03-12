@@ -170,12 +170,20 @@
                             <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="white" translatesAutoresizingMaskIntoConstraints="NO" id="vP5-Rj-4dy">
                                 <rect key="frame" x="177.5" y="323.5" width="20" height="20"/>
                             </activityIndicatorView>
+                            <view userInteractionEnabled="NO" alpha="0.0" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Gtp-Th-L7B">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.74853914567869007" colorSpace="custom" customColorSpace="sRGB"/>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" name="primary"/>
                         <constraints>
                             <constraint firstItem="vP5-Rj-4dy" firstAttribute="centerX" secondItem="dDd-br-UDb" secondAttribute="centerX" id="4bd-Sm-K0x"/>
                             <constraint firstItem="12m-HR-qpw" firstAttribute="leading" secondItem="5QM-Ty-TBJ" secondAttribute="leading" id="7GQ-dZ-hTn"/>
                             <constraint firstItem="5QM-Ty-TBJ" firstAttribute="trailing" secondItem="12m-HR-qpw" secondAttribute="trailing" id="GkT-K7-rdZ"/>
+                            <constraint firstItem="Gtp-Th-L7B" firstAttribute="trailing" secondItem="5QM-Ty-TBJ" secondAttribute="trailing" id="Lyt-eT-Pmn"/>
+                            <constraint firstItem="5QM-Ty-TBJ" firstAttribute="bottom" secondItem="Gtp-Th-L7B" secondAttribute="bottom" id="cx9-xK-GTs"/>
+                            <constraint firstItem="Gtp-Th-L7B" firstAttribute="top" secondItem="dDd-br-UDb" secondAttribute="top" id="d9q-uN-Lsl"/>
+                            <constraint firstItem="Gtp-Th-L7B" firstAttribute="leading" secondItem="5QM-Ty-TBJ" secondAttribute="leading" id="jq6-47-ohe"/>
                             <constraint firstItem="vP5-Rj-4dy" firstAttribute="centerY" secondItem="dDd-br-UDb" secondAttribute="centerY" id="lBd-5X-f6m"/>
                             <constraint firstItem="12m-HR-qpw" firstAttribute="top" secondItem="5QM-Ty-TBJ" secondAttribute="top" id="mdb-oj-VsV"/>
                             <constraint firstItem="5QM-Ty-TBJ" firstAttribute="bottom" secondItem="12m-HR-qpw" secondAttribute="bottom" id="oZk-SL-bIR"/>
@@ -188,6 +196,7 @@
                     <connections>
                         <outlet property="activityIndicator" destination="vP5-Rj-4dy" id="MSh-bM-w7X"/>
                         <outlet property="collectionView" destination="12m-HR-qpw" id="kfx-I7-JEe"/>
+                        <outlet property="darkView" destination="Gtp-Th-L7B" id="QIa-tI-xow"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SgL-pf-Arw" userLabel="First Responder" sceneMemberID="firstResponder"/>
