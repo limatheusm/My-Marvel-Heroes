@@ -30,6 +30,8 @@ class MyHeroesViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        tableView.contentInset = UIEdgeInsets(top: -5, left: 0, bottom: -5, right: 0);
+        navigationController?.navigationBar.titleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.groupTableViewBackground]
     }
     
     override func viewWillAppear(_ animated: Bool) {

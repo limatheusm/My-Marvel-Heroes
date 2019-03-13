@@ -72,10 +72,10 @@
                                                     </subviews>
                                                     <color key="backgroundColor" white="0.0" alpha="0.64645761986301364" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <constraints>
-                                                        <constraint firstItem="yzO-pP-7nD" firstAttribute="leading" secondItem="rAE-uQ-z3S" secondAttribute="leading" constant="16" id="Bvg-d2-AqI"/>
+                                                        <constraint firstItem="yzO-pP-7nD" firstAttribute="leading" secondItem="rAE-uQ-z3S" secondAttribute="leading" constant="16" id="GJC-K0-pzf"/>
+                                                        <constraint firstItem="yzO-pP-7nD" firstAttribute="centerY" secondItem="rAE-uQ-z3S" secondAttribute="centerY" id="X86-ea-Hik"/>
                                                         <constraint firstItem="yzO-pP-7nD" firstAttribute="centerX" secondItem="rAE-uQ-z3S" secondAttribute="centerX" id="mk1-OE-X7T"/>
-                                                        <constraint firstAttribute="trailing" secondItem="yzO-pP-7nD" secondAttribute="trailing" constant="16" id="s7l-gJ-vas"/>
-                                                        <constraint firstItem="yzO-pP-7nD" firstAttribute="centerY" secondItem="rAE-uQ-z3S" secondAttribute="centerY" id="tCf-9J-k6w"/>
+                                                        <constraint firstAttribute="trailing" secondItem="yzO-pP-7nD" secondAttribute="trailing" constant="16" id="ooI-Zc-Vkc"/>
                                                     </constraints>
                                                 </view>
                                             </subviews>

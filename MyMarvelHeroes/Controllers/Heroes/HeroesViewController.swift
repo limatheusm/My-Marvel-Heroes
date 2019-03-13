@@ -79,6 +79,7 @@ class HeroesViewController: UIViewController {
         MarvelAPIManager.sharedInstance.getHeroes(nameStartsWith: heroNameSearch, page: page) { (result) in
             switch result {
             case .failure(let errorMessage):
+                self.currentPage = self.currentPage > 0 ? self.currentPage - 1 : 0
                 self.displayError(errorMessage)
             case .success(let heroesContainer):
                 guard let heroes = heroesContainer.results, let total = heroesContainer.total else {
