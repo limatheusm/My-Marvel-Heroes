@@ -1,7 +1,5 @@
 # My Marvel Heroes
 
-iOS application developed from scratch during the Udacity Nanodegree iOS developer course.
-
 The main idea of the project was designed by me, including features, interface, assets and navigation. The project was built from scratch and went through several stages until the final implementation, such as API research, core idea, creation of user interfaces, elicitation and validation of requirements with users. Each stage of development was supported by the Udacity team.
 
 ## Project Overview
@@ -45,4 +43,13 @@ The user can make a list of their favorite heroes by touching the heart button. 
 Marvel Heroes Tab | Favorites Tab
 :-:|:-:
 <img src="readme-assets/coredata.gif" width=200 /> | <img src="readme-assets/myheroes.gif" width=200 />
+
+### Search
+
+The search is performed, following the marvel API, by the initials of the hero's name.
+
+Marvel API says:
+> Return characters with names that begin with the specified string (e.g. Sp).
+
+<img src="readme-assets/search.gif" width=200 />
 
