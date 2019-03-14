@@ -12,8 +12,10 @@ App developed for Marvel Fans. **My Marvel Heroes** allows you to search and see
 
 **My Marvel Heroes** APP uses the Marvel API to retrieve all information about the heroes. The Marvel Comics API allows developers everywhere to access information about Marvel's vast library of comics—from what's coming up, to 70 years ago.
 
-## Users guide
+## Instalation
+Open the `MyMarvelHeroes.xcodeproj` in XCode and run it.
 
+## Users guide
 
 Navigation | Details | Search | Favorite
 :-:|:-:|:-:|:-:

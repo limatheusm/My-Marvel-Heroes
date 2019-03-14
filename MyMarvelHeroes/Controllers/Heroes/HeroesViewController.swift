@@ -200,19 +200,21 @@ extension HeroesViewController {
         
         /* From here with indicator */
         self.collectionView.isHidden = loading
-        if loading {
-            activityIndicator.startAnimating()
-        } else {
-            activityIndicator.stopAnimating()
-        }
+        loading ? activityIndicator.startAnimating() : activityIndicator.stopAnimating()
     }
     
     func scrollToTop(animated: Bool = true) {
-        if Thread.isMainThread {
+        runInMainThread {
             self.collectionView.setContentOffset(CGPoint(x: 0, y: 0), animated: animated)
+        }
+    }
+    
+    func runInMainThread(completion: @escaping () -> Void) {
+        if Thread.isMainThread {
+            completion()
         } else {
             DispatchQueue.main.async {
-                self.collectionView.setContentOffset(CGPoint(x: 0, y: 0), animated: animated)
+                completion()
             }
         }
     }
